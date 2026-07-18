@@ -1,0 +1,23 @@
+/* 1. Apuntamos al 'ul' que está dentro de tu contenedor '.menu-casa' */
+.menu-casa ul {
+  list-style: none; /* Quita los puntos negros */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Alinea los elementos de forma horizontal */
+  gap: 25px; /* Separación entre cada palabra */
+  font-family: sans-serif;
+}
+
+/* 2. Estilo para los enlaces de tu menú */
+.menu-casa a {
+  text-decoration: none; /* Quita el subrayado azul por defecto */
+  color: #f05a28; /* Color naranja */
+  font-weight: bold;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+
+/* 3. Efecto al pasar el ratón por encima (Hover) */
+.menu-casa a:hover {
+  border-bottom: 2px solid #f05a28; /* Línea elegante abajo */
+}
