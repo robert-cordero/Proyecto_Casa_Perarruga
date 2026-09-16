@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Habitación Alcañón de Casa Perarruga, habitación cuádruple con baño privado en Pozán de Vero."
+      content="Habitación Alcañón doble, pequeña y acogedora, con cama de matrimonio, baño privado y ventana al patio en Pozán de Vero."
     />
     <title>Habitación Alcañón | Casa Perarruga</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,12 +62,15 @@
       </div>
     </header>
     <main>
-      <section class="page-hero page-width room-detail-hero">
+      <section
+        class="page-hero page-width room-detail-hero room-detail-hero--alcanon"
+      >
         <p class="eyebrow">Las habitaciones · 03</p>
         <h1>Habitación Alcañón</h1>
         <p>
-          Una habitación cuádruple confortable y con encanto, con baño privado
-          dentro.
+          Habitación doble, la más pequeña de la casa pero muy acogedora, con
+          cama de matrimonio, baño privado dentro y una pequeña ventana al patio
+          de la casa.
         </p>
       </section>
       <section
@@ -89,23 +92,55 @@
           />
         </div>
         <div class="room-description">
-          <p class="eyebrow">Descansa entre viñedos</p>
-          <h2 id="room-description-title">Espacio para compartir</h2>
+          <p class="eyebrow">Intimidad y calma</p>
+          <h2 id="room-description-title">Pequeña, íntima y acogedora</h2>
           <p>
-            Alcañón es una habitación cuádruple amplia y luminosa, ideal para
-            familias o grupos que quieren descubrir el Somontano juntos.
+            Alcañón aprovecha cada rincón para ofrecer una estancia confortable
+            y tranquila. Es una opción perfecta para quienes buscan un espacio
+            íntimo donde descansar.
           </p>
           <p>
-            Cuenta con baño privado y el ambiente acogedor de una casa de pueblo
-            reformada. El desayuno buffet estilo continental está incluido en
-            todas las tarifas.
+            La ventana orientada al patio transmite la calma de la casa y su
+            carácter tradicional. El desayuno buffet estilo continental está
+            incluido en todas las tarifas.
           </p>
           <a class="button button--primary" href="contacto.html"
             >Reservar ahora <span aria-hidden="true">↗</span></a
           >
         </div>
       </section>
+      <section
+        class="room-photo-carousel page-width"
+        aria-label="Galería de la habitación Alcañón"
+      >
+        <button
+          class="room-photo-carousel__control room-photo-carousel__control--previous"
+          type="button"
+          aria-label="Imagen anterior"
+        >
+          ‹
+        </button>
+        <div class="room-photo-carousel__track">
+          <img
+            src="imgs/Habitaciones/Alcañon/Alcañon.jpg"
+            alt="Habitación Alcañón"
+          />
+          <img
+            src="imgs/Habitaciones/Alcañon/image00008-768x576.jpeg"
+            alt="Interior de la habitación Alcañón"
+            loading="lazy"
+          />
+        </div>
+        <button
+          class="room-photo-carousel__control room-photo-carousel__control--next"
+          type="button"
+          aria-label="Imagen siguiente"
+        >
+          ›
+        </button>
+      </section>
     </main>
+    <script src="room-carousel.js"></script>
     <footer class="site-footer">
       <div class="page-width footer-grid">
         <div>
