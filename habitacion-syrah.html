@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Casa Perarruga: casa rural con encanto en Pozán de Vero, en el corazón del Somontano y cerca de la Sierra de Guara."
+      content="Habitación Syrah de Casa Perarruga, habitación cuádruple con baño privado en Pozán de Vero."
     />
-    <meta
-      name="keywords"
-      content="casa rural Pozán de Vero, turismo Somontano, alojamiento Sierra de Guara"
-    />
-    <meta name="author" content="Casa Perarruga" />
-    <meta name="theme-color" content="#542f2a" />
-    <title>Casa Perarruga | Tu refugio en el Somontano</title>
+    <title>Habitación Syrah | Casa Perarruga</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,33 +19,36 @@
   <body>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="index.html" aria-label="Casa Perarruga, inicio">
-          <span class="brand__mark"
+        <a class="brand" href="index.html" aria-label="Casa Perarruga, inicio"
+          ><span class="brand__mark"
             ><img
               src="imgs/Logo-Casa-Perarruga-WP_-2.jpg"
-              alt="Logo de Casa Perarruga"
-          /></span>
-          <span class="brand__text"
+              alt="Logo de Casa Perarruga" /></span
+          ><span class="brand__text"
             ><strong>Casa Perarruga</strong
             ><small>Pozán de Vero · Somontano</small></span
-          >
-        </a>
-        <input class="menu-toggle" type="checkbox" id="menu-toggle" />
-        <label class="menu-button" for="menu-toggle"
+          ></a
+        ><input class="menu-toggle" type="checkbox" id="menu-toggle" /><label
+          class="menu-button"
+          for="menu-toggle"
           ><span></span><span></span><span></span
           ><span class="sr-only">Abrir menú</span></label
         >
         <nav class="site-nav" aria-label="Navegación principal">
           <ul>
-            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="la-casa.html">La Casa</a></li>
             <li class="nav-dropdown">
-              <a href="habitaciones.html">Las Habitaciones</a>
+              <a href="habitaciones.html" aria-current="page"
+                >Las Habitaciones</a
+              >
               <ul class="nav-dropdown__menu">
                 <li><a href="habitacion-garnacha.html">Garnacha</a></li>
                 <li><a href="habitacion-merlot.html">Merlot</a></li>
                 <li><a href="habitacion-alcanon.html">Alcañón</a></li>
-                <li><a href="habitacion-syrah.html">Syrah</a></li>
+                <li>
+                  <a href="habitacion-syrah.html" aria-current="page">Syrah</a>
+                </li>
               </ul>
             </li>
             <li><a href="servicios.html">Servicios</a></li>
@@ -62,41 +59,51 @@
         </nav>
       </div>
     </header>
-
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__content page-width">
-          <p class="eyebrow">Una casa con historia · Huesca</p>
-          <h1 id="hero-title">Antigua casa de pueblo en Pozán de Vero</h1>
-          <p class="hero__intro">
-            Datada a finales del siglo XIX y totalmente reformada. Ven a
-            descubrir el Somontano y la Sierra de Guara disfrutando del descanso
-            y sintiéndote como en casa.
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="habitaciones.html"
-              >Descubre las habitaciones <span aria-hidden="true">↗</span></a
-            >
-            <a class="button button--secondary" href="la-casa.html">
-              <svg
-                class="button__icon"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="m3 11 9-7 9 7M5 10v10h14V10M9 20v-6h6v6" />
-              </svg>
-              <span>Conoce Casa Perarruga</span>
-            </a>
-          </div>
+      <section class="page-hero page-width room-detail-hero">
+        <p class="eyebrow">Las habitaciones · 04</p>
+        <h1>Habitación Syrah</h1>
+        <p>
+          Una habitación cuádruple confortable y con encanto, con baño privado
+          dentro.
+        </p>
+      </section>
+      <section
+        class="room-detail page-width"
+        aria-labelledby="room-description-title"
+      >
+        <div class="room-gallery">
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"
+            alt="Habitación Syrah con detalles de madera"
+          /><img
+            src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
+            alt="Detalle de la habitación Syrah"
+            loading="lazy"
+          /><img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
+            alt="Rincón acogedor de la habitación Syrah"
+            loading="lazy"
+          />
         </div>
-        <div class="hero__meta page-width">
-          <span>Vivienda de Turismo Rural</span
-          ><span>Pozán de Vero, Huesca</span>
+        <div class="room-description">
+          <p class="eyebrow">Descansa entre viñedos</p>
+          <h2 id="room-description-title">Confort para compartir</h2>
+          <p>
+            Syrah es una habitación cuádruple acogedora, perfecta para compartir
+            unos días de descanso y naturaleza en familia o con amigos.
+          </p>
+          <p>
+            Cuenta con baño privado y detalles cálidos que conectan con la
+            historia de Casa Perarruga. El desayuno buffet estilo continental
+            está incluido en todas las tarifas.
+          </p>
+          <a class="button button--primary" href="contacto.html"
+            >Reservar ahora <span aria-hidden="true">↗</span></a
+          >
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
       <div class="page-width footer-grid">
         <div>
