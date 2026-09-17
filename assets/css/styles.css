@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --cream: #f6f1e8;
   --paper: #fffdf8;
   --stone: #e5dccd;
@@ -300,7 +300,7 @@ input:focus-visible+.menu-button {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/DSC_0624.JPG");
+    url("../img/DSC_0624.JPG");
   background-position: center;
   background-size: cover;
 }
@@ -1123,7 +1123,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/Casa_Perarruga_Exterior.jpg");
+    url("../img/Casa_Perarruga_Exterior.jpg");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
@@ -1183,7 +1183,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/105484343.jpg");
+    url("../img/105484343.jpg");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
@@ -1288,25 +1288,25 @@ cite {
 .room-detail-hero--garnacha {
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/Habitaciones/Garnacha/Garnacha.jpg");
+    url("../img/Habitaciones/Garnacha/Garnacha.jpg");
 }
 
 .room-detail-hero--merlot {
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/Habitaciones/Merlot/Merlot.jpg");
+    url("../img/Habitaciones/Merlot/Merlot.jpg");
 }
 
 .room-detail-hero--alcanon {
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/Habitaciones/Alcañon/Alcañon.jpg");
+    url("../img/Habitaciones/Alcañon/Alcañon.jpg");
 }
 
 .room-detail-hero--syrah {
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/Habitaciones/Syrah/Syrah.jpg");
+    url("../img/Habitaciones/Syrah/Syrah.jpg");
 }
 
 .room-detail-hero h1 {
@@ -2615,7 +2615,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("imgs/136306619.jpg");
+    url("../img/136306619.jpg");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
