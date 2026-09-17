@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --cream: #f6f1e8;
   --paper: #fffdf8;
   --stone: #e5dccd;
@@ -243,6 +243,15 @@ input:focus-visible + .menu-button {
   color: var(--white);
   background: var(--wine);
   text-align: center;
+  transition: filter 180ms ease;
+}
+.site-nav .nav-cta:hover,
+.site-nav .nav-cta:focus-visible {
+  color: var(--white);
+  filter: brightness(0.88);
+}
+.site-nav .nav-cta.nav-cta--booking {
+  background: #003b95;
 }
 
 .hero {
@@ -1217,6 +1226,85 @@ cite {
 .room-description .button {
   margin-top: 1rem;
 }
+/* ── Bloque de características: tarjetas clave-valor ───────────── */
+.room-amenities {
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  border-top: 1px solid var(--stone);
+}
+.room-amenities__title {
+  margin-bottom: 2rem;
+  color: var(--wine);
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  text-align: center;
+}
+.room-amenities__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 1.25rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.room-amenities__card {
+  border: 1px solid var(--stone);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.room-amenities__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--wine);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.room-amenities__card-header svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.room-amenities__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.room-amenities__table tr:nth-child(even) td {
+  background: #faf8f5;
+}
+.room-amenities__table tr:last-child td {
+  border-bottom: 0;
+}
+.room-amenities__table td {
+  padding: 0.6rem 1.25rem;
+  border-bottom: 1px solid var(--stone);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+.room-amenities__table td:first-child {
+  width: 46%;
+  color: var(--ink);
+  font-weight: 600;
+}
+.room-amenities__table td:last-child {
+  color: var(--muted);
+}
+.room-amenities__note {
+  margin: 1.5rem auto 0;
+  max-width: 50rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
+  text-align: center;
+}
 .content-page,
 .contact-page,
 .pricing-page,
@@ -1494,4 +1582,606 @@ cite {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Sobre Nosotros (Nuestra Historia) */
+.about-us__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background-color: #faf8f5;
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+  .about-us__inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 2.5rem 3rem;
+    gap: 2.5rem;
+  }
+}
+
+.about-us__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.eyebrow--wine {
+  color: var(--wine) !important;
+}
+
+.about-us__quote {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--wine);
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--wine);
+  line-height: 1.4;
+}
+
+.about-us__image-container {
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-us__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.house-page .about-us {
+  order: 4;
+}
+
+.about-us { padding: 5rem 0 3rem; }
+
+
+#about-us-title {
+  scroll-margin-top: 6rem;
+}
+
+/* --------------------------------------------
+   P�GINA SERVICIOS
+-------------------------------------------- */
+
+/* 1. Grid de Servicios Incluidos */
+.svc-included__header {
+  margin-bottom: 3rem;
+}
+.svc-included__header h2 {
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--wine);
+  margin-top: 0.5rem;
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.svc-card {
+  background: var(--paper);
+  border: 1px solid var(--stone);
+  border-radius: 0.75rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.svc-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+.svc-card__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(84,47,42,0.08);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wine);
+  flex-shrink: 0;
+}
+.svc-card__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.svc-card h3 {
+  font-family: var(--heading);
+  font-size: 1.1rem;
+  color: var(--wine);
+  margin: 0;
+}
+.svc-card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Sub-bloque "Tambi�n te ofrecemos" */
+.svc-also {
+  background: linear-gradient(135deg, var(--cream) 0%, #f0e8d8 100%);
+  border-left: 4px solid var(--wine);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 2rem 2.5rem;
+}
+.svc-also__title {
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  color: var(--wine);
+  margin: 0 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.svc-also__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.svc-also__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.6;
+}
+.svc-also__list li svg {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex-shrink: 0;
+  margin-top: 0.55em;
+  color: var(--wine);
+}
+
+/* 2. Secci�n Desayuno */
+.svc-breakfast {
+  background: var(--cream);
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+.svc-breakfast__intro {
+  display: grid;
+  gap: 1.5rem 3rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 50rem) {
+  .svc-breakfast__intro {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+.svc-breakfast__intro h2 {
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--wine);
+  margin-top: 0.5rem;
+}
+.svc-breakfast__lead {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 0;
+  align-self: center;
+}
+
+/* Carrusel Servicios */
+.svc-carousel {
+  position: relative;
+  margin-block: 2.5rem;
+}
+.svc-carousel__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  aspect-ratio: 16/7;
+}
+.svc-carousel__track::-webkit-scrollbar { display: none; }
+.svc-carousel__track img {
+  width: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  display: block;
+}
+.svc-carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  background: rgb(255 253 248 / 90%);
+  border: 1px solid var(--stone);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--wine);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, box-shadow 0.2s;
+  line-height: 1;
+}
+.svc-carousel__control:hover { background: var(--paper); box-shadow: var(--shadow); }
+.svc-carousel__control--prev { left: 1rem; }
+.svc-carousel__control--next { right: 1rem; }
+
+/* Kitchen block */
+.svc-kitchen {
+  display: grid;
+  gap: 1.5rem 3rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+@media (min-width: 50rem) {
+  .svc-kitchen { grid-template-columns: 1fr 1fr; }
+}
+.svc-kitchen h3 {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  color: var(--wine);
+  margin: 0 0 0.75rem;
+}
+.svc-kitchen__text p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Badge aviso */
+.svc-kitchen__badge { display: flex; align-items: center; }
+.svc-badge {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--wine);
+  color: var(--paper);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+.svc-badge svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.svc-badge strong { color: #f7c5a0; }
+
+/* 3. Productos */
+.svc-products__card {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  background: var(--cream);
+  border-radius: 1rem;
+  padding: 2.5rem 3rem;
+  border: 1px solid var(--stone);
+}
+@media (max-width: 49rem) {
+  .svc-products__card { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
+}
+.svc-products__icon {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(84,47,42,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wine);
+}
+.svc-products__icon svg { width: 1.8rem; height: 1.8rem; }
+.svc-products__content h2 {
+  font-family: var(--heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--wine);
+  margin: 0.4rem 0 1rem;
+}
+.svc-products__content p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+}
+.svc-products__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.svc-products__items li {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* 4. Actividades */
+.svc-activities {
+  background: var(--cream);
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+.svc-activities__intro {
+  display: grid;
+  gap: 1.5rem 3rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 50rem) {
+  .svc-activities__intro { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+.svc-activities__intro h2 {
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--wine);
+  margin-top: 0.5rem;
+}
+.svc-activities__lead {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 0;
+  align-self: center;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1.25rem;
+}
+.activity-card {
+  background: var(--paper);
+  border: 1px solid var(--stone);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.activity-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+.activity-card--highlight {
+  border-color: var(--wine);
+  background: linear-gradient(135deg, #fdf6f0 0%, var(--paper) 100%);
+}
+.activity-card__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(84,47,42,0.08);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wine);
+  flex-shrink: 0;
+}
+.activity-card__icon svg { width: 1.25rem; height: 1.25rem; }
+.activity-card h3 {
+  font-family: var(--heading);
+  font-size: 1rem;
+  color: var(--wine);
+  margin: 0;
+}
+.activity-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 5. CTA Final */
+.svc-cta__inner {
+  background: var(--wine);
+  color: var(--paper);
+  border-radius: 1.25rem;
+  padding: clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.svc-cta__inner .eyebrow {
+  color: rgba(255,253,248,0.6);
+}
+.svc-cta__inner h2 {
+  font-family: var(--heading);
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  color: var(--paper);
+  margin: 0;
+}
+.svc-cta__inner p {
+  color: rgba(255,253,248,0.75);
+  font-size: 1rem;
+  max-width: 46ch;
+  margin: 0;
+  line-height: 1.7;
+}
+.svc-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.svc-cta__inner .button--secondary {
+  border-color: rgba(255,253,248,0.4);
+  color: var(--paper);
+  background: transparent;
+}
+.svc-cta__inner .button--secondary:hover {
+  background: rgba(255,253,248,0.1);
+}
+
+/* --------------------------------------------
+   MINI-CARRUSELES COMPACTOS (Servicios)
+-------------------------------------------- */
+.svc-breakfast__block {
+  margin-bottom: 3rem;
+}
+.svc-breakfast__block--kitchen {
+  padding-top: 2rem;
+  border-top: 1px solid var(--stone);
+}
+
+.svc-mini-carousel {
+  margin: 1.75rem auto 0;
+  max-width: 650px;
+}
+.svc-mini-carousel__wrapper {
+  position: relative;
+}
+.svc-mini-carousel__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 12px;
+  height: 300px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.svc-mini-carousel__track::-webkit-scrollbar { display: none; }
+.svc-mini-carousel__track img {
+  width: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+.svc-mini-carousel__wrapper .svc-carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.3rem;
+}
+.svc-mini-carousel__wrapper .svc-carousel__control--prev { left: 0.6rem; }
+.svc-mini-carousel__wrapper .svc-carousel__control--next { right: 0.6rem; }
+
+/* Kitchen text with badge inline */
+.svc-breakfast__block--kitchen .svc-kitchen__text h3 {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  color: var(--wine);
+  margin: 0 0 0.75rem;
+}
+.svc-breakfast__block--kitchen .svc-kitchen__text p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+}
+
+/* Sub-bloques sim�tricos Desayuno/Cocina */
+.svc-section-header {
+  margin-bottom: 2.5rem;
+}
+.svc-section-header h2 {
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--wine);
+  margin-top: 0.4rem;
+}
+
+.svc-subblock {
+  margin-bottom: 2rem;
+}
+.svc-subblock__title {
+  font-family: var(--heading);
+  font-size: 1.45rem;
+  color: var(--wine);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--stone);
+  display: inline-block;
+}
+.svc-subblock__text {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+  max-width: 72ch;
+}
+.svc-subblock .svc-badge {
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+}
+
+.svc-divider {
+  border: 0;
+  border-top: 1px solid var(--stone);
+  margin: 2.5rem 0;
+}
+
+/* --------------------------------------------
+   HERO SERVICIOS
+-------------------------------------------- */
+.svc-page {
+  display: flex;
+  flex-direction: column;
+}
+.svc-page .page-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: min(48rem, calc(100svh - 4.75rem));
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding: 5rem max(1rem, calc((100% - var(--content-width)) / 2)) 4rem;
+  color: var(--white);
+  background-image:
+    linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
+    url("imgs/136306619.jpg");
+  background-position: center;
+  background-size: cover;
+  border-bottom: 0;
+}
+.svc-page .page-hero h1 {
+  color: var(--white);
+  max-width: none;
+}
+.svc-page .page-hero > p:not(.eyebrow) {
+  max-width: 33rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.svc-page .page-hero > p:last-child {
+  color: var(--stone);
+}
+.svc-page .page-hero .eyebrow {
+  color: var(--stone);
 }
