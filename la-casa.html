@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <header class="site-header">
@@ -22,7 +22,7 @@
         <a class="brand" href="index.html" aria-label="Casa Perarruga, inicio"
           ><span class="brand__mark"
             ><img
-              src="imgs/Logo-Casa-Perarruga-WP_-2.jpg"
+              src="assets/img/Logo-Casa-Perarruga-WP_-2.jpg"
               alt="Logo de Casa Perarruga" /></span
           ><span class="brand__text"
             ><strong>Casa Perarruga</strong
@@ -37,7 +37,20 @@
         <nav class="site-nav" aria-label="Navegación principal">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="la-casa.html" aria-current="page">La Casa</a></li>
+            <li class="nav-dropdown">
+              <a href="la-casa.html" aria-current="page">La Casa</a>
+              <ul class="nav-dropdown__menu">
+                <li>
+                  <a href="la-casa.html#casa-espacios">Descubre la Casa</a>
+                </li>
+                <li>
+                  <a href="la-casa.html#entorno-casa">Explora el Entorno</a>
+                </li>
+                <li>
+                  <a href="la-casa.html#about-us-title">Sobre Nosotros</a>
+                </li>
+              </ul>
+            </li>
             <li class="nav-dropdown">
               <a href="habitaciones.html">Las Habitaciones</a>
               <ul class="nav-dropdown__menu">
@@ -47,10 +60,21 @@
                 <li><a href="habitacion-syrah.html">Syrah</a></li>
               </ul>
             </li>
-            <li><a href="servicios.html">Servicios</a></li>
+            <li class="nav-dropdown">
+              <a href="servicios.html">Servicios</a>
+              <ul class="nav-dropdown__menu">
+                <li><a href="servicios.html#servicios-title">Servicios incluidos</a></li>
+                <li><a href="servicios.html#desayuno-title">Desayuno &amp; Cocina</a></li>
+                <li><a href="servicios.html#productos-title">Productos</a></li>
+                <li><a href="servicios.html#actividades-title">Actividades</a></li>
+              </ul>
+            </li>
             <li><a href="tarifas.html">Tarifas</a></li>
             <li><a href="opiniones.html">Opiniones</a></li>
-            <li><a class="nav-cta" href="contacto.html">Contacto</a></li>
+                        <li><a class="nav-cta" href="contacto.html">Contacto</a></li>
+            <li>
+              <a class="nav-cta nav-cta--booking" href="https://www.booking.com/hotel/es/casa-perarruga.es.html?label=casa-perarruga-aPDXB5siTOXOJWH2P6ihbQS466324829192%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-368432872474%3Alp9197910%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80&amp;sid=4bc61bdd47e0f33b08dd6b1c204d0a0e&amp;gclid=CjwKCAjw_KjVBhAHEiwAnC0N9K6-22BFaxeWyyTwNk_1AvTN_GtbEFXbpusUPiJRdxfGMWek1PBj7BoCmowQAvD_BwE&amp;aid=311090&amp;ucfs=1&amp;arphpl=1&amp;dest_id=-397373&amp;dest_type=city&amp;group_adults=2&amp;req_adults=2&amp;no_rooms=1&amp;group_children=0&amp;req_children=0&amp;hpos=1&amp;hapos=1&amp;sr_order=popularity&amp;srpvid=c06a6f31c897105a&amp;srepoch=1789573737&amp;from=searchresults" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -58,26 +82,44 @@
     <main class="house-page">
       <section class="page-hero page-width">
         <p class="eyebrow">El corazón de Casa Perarruga</p>
-        <h1>Una casa de pueblo en un entorno lleno de posibilidades</h1>
+        <h1>Historia y naturaleza en Casa Perarruga</h1>
         <p>
           Antigua casa de pueblo de finales del siglo XIX, totalmente reformada
           y habilitada como vivienda de turismo rural en 2016.
         </p>
+        <nav
+          class="house-section-nav"
+          aria-label="Acciones y secciones de La Casa"
+        >
+          <a href="#casa-espacios"
+            >Descubre la casa <span aria-hidden="true">↓</span></a
+          >
+          <a href="#entorno-casa"
+            >Explora el entorno <span aria-hidden="true">↓</span></a
+          >
+        </nav>
       </section>
       <section class="content-page page-width">
         <div class="content-columns">
           <div class="content-copy">
             <p class="eyebrow">Pozán de Vero · Huesca</p>
-            <h2>Calidez y comodidad</h2>
+            <h2 id="casa-espacios">La casa y sus espacios</h2>
             <p>
-              Casa Perarruga se encuentra en el pueblo de Pozán de Vero, entre
-              los viñedos del Somontano y la naturaleza de la Sierra de Guara.
-              Cada espacio está pensado para que descanses, compartas y te
-              sientas como en casa.
+              <strong>Casa Perarruga</strong> es una antigua casa de pueblo
+              datada de finales del siglo XIX. Está situada en Pozán de Vero y
+              fue totalmente reformada y habilitada como vivienda de turismo
+              rural en 2016.
+            </p>
+            <p>
+              La casa consta de tres plantas y cuatro habitaciones, con espacios
+              pensados para descansar, compartir y sentirse como en casa. Cada
+              planta conserva el carácter de la vivienda y combina elementos
+              tradicionales con las comodidades necesarias para una estancia
+              agradable.
             </p>
             <figure class="rural-seal">
               <img
-                src="imgs/vivienda-768x983.jpg"
+                src="assets/img/vivienda-768x983.jpg"
                 alt="Sello oficial de Vivienda de Turismo Rural"
                 loading="lazy"
               />
@@ -86,7 +128,17 @@
               </figcaption>
             </figure>
             <a class="button button--primary house-cta" href="habitaciones.html"
-              >Descubrir las habitaciones <span aria-hidden="true">↗</span></a
+              ><svg
+                class="button__icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M3 18v-6h18v6M3 15h18M5 12V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3M11 12V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3M3 18v2M21 18v2"
+                />
+              </svg>
+              <span>Descubrir las habitaciones</span></a
             >
           </div>
           <div class="floor-list">
@@ -100,8 +152,9 @@
                 ><span>Patio y recepción</span>
               </h3>
               <p>
-                El patio de entrada recibe a los huéspedes y funciona como
-                recepción de la casa.
+                El patio de entrada recibe a los huéspedes y funciona
+                actualmente como recepción de la casa, conservando el carácter
+                acogedor de esta antigua vivienda de pueblo.
               </p>
             </article>
             <article class="detail-card">
@@ -114,9 +167,10 @@
                 ><span>Cocina, desayuno y terraza</span>
               </h3>
               <p>
-                Una habitación cuádruple, cocina-comedor equipada a disposición
-                de los clientes y una terraza con mesas para desayunar o
-                disfrutar del silencio.
+                Aquí se encuentra una habitación cuádruple y la cocina-comedor,
+                perfectamente equipada y a disposición de los clientes. En la
+                terraza, con mesas al aire libre, se puede desayunar o pasar un
+                rato disfrutando del silencio y del canto de los pájaros.
               </p>
             </article>
             <article class="detail-card">
@@ -129,8 +183,10 @@
                 ><span>Tres habitaciones</span>
               </h3>
               <p>
-                Dos habitaciones dobles y una cuádruple, todas con baño privado
-                dentro.
+                En esta planta se encuentran las otras tres habitaciones: dos
+                dobles y una cuádruple. Todas cuentan con baño privado dentro,
+                para disfrutar de mayor comodidad e intimidad durante la
+                estancia.
               </p>
             </article>
           </div>
@@ -145,47 +201,47 @@
           </button>
           <div class="house-slider__track">
             <img
-              src="imgs/Slider_La_Casa/Cocina-Casa-Perarruga.jpg"
+              src="assets/img/Slider_La_Casa/Cocina-Casa-Perarruga.jpg"
               alt="Cocina de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/image00006-scaled.jpeg"
+              src="assets/img/Slider_La_Casa/image00006-scaled.jpeg"
               alt="Habitación de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/Perarruga-entrada.jpg"
+              src="assets/img/Slider_La_Casa/Perarruga-entrada.jpg"
               alt="Entrada de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/image00009.jpeg"
+              src="assets/img/Slider_La_Casa/image00009.jpeg"
               alt="Interior de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/image00015.jpeg"
+              src="assets/img/Slider_La_Casa/image00015.jpeg"
               alt="Dormitorio de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/image00016-scaled.jpeg"
+              src="assets/img/Slider_La_Casa/image00016-scaled.jpeg"
               alt="Espacio interior de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/image00027-1-scaled.jpeg"
+              src="assets/img/Slider_La_Casa/image00027-1-scaled.jpeg"
               alt="Sala de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/Perarruga-1-habitacion-2a-planta.jpeg"
+              src="assets/img/Slider_La_Casa/Perarruga-1-habitacion-2a-planta.jpeg"
               alt="Habitación de la segunda planta"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/Perarruga-entrada (1).jpg"
+              src="assets/img/Slider_La_Casa/Perarruga-entrada (1).jpg"
               alt="Entrada de Casa Perarruga al atardecer"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/Recepcion-Casa-Perarruga.jpg"
+              src="assets/img/Slider_La_Casa/Recepcion-Casa-Perarruga.jpg"
               alt="Recepción de Casa Perarruga"
               loading="lazy"
             /><img
-              src="imgs/Slider_La_Casa/Sala-desayuno-Casa-Perarruga.jpg"
+              src="assets/img/Slider_La_Casa/Sala-desayuno-Casa-Perarruga.jpg"
               alt="Sala de desayunos de Casa Perarruga"
               loading="lazy"
             />
@@ -201,6 +257,7 @@
       </section>
       <section
         class="surroundings section"
+        id="entorno-casa"
         aria-labelledby="surroundings-title"
       >
         <div class="page-width">
@@ -224,7 +281,7 @@
             <article class="interest-card">
               <img
                 class="interest-card__image"
-                src="imgs/Azud.jpg"
+                src="assets/img/Azud.jpg"
                 alt="Azud del río Vero"
                 loading="lazy"
               />
@@ -244,7 +301,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   ><span class="interest-card__map-slot"
-                    ><img src="icons/google-maps.svg" alt="" /></span
+                    ><img src="assets/icons/google-maps.svg" alt="" /></span
                   ><span class="interest-card__map-label">VER EN EL MAPA</span
                   ><span class="interest-card__map-slot" aria-hidden="true"
                     >↗</span
@@ -255,7 +312,7 @@
             <article class="interest-card">
               <img
                 class="interest-card__image"
-                src="imgs/pozandevero-religioso-ermitadesanmacario-01 - copia (1).jpg"
+                src="assets/img/pozandevero-religioso-ermitadesanmacario-01 - copia (1).jpg"
                 alt="Ermita de San Macario"
                 loading="lazy"
               />
@@ -273,7 +330,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   ><span class="interest-card__map-slot"
-                    ><img src="icons/google-maps.svg" alt="" /></span
+                    ><img src="assets/icons/google-maps.svg" alt="" /></span
                   ><span class="interest-card__map-label">VER EN EL MAPA</span
                   ><span class="interest-card__map-slot" aria-hidden="true"
                     >↗</span
@@ -284,7 +341,7 @@
             <article class="interest-card">
               <img
                 class="interest-card__image"
-                src="imgs/brasa-y-birra-general-1024x590 (1).jpeg"
+                src="assets/img/brasa-y-birra-general-1024x590 (1).jpeg"
                 alt="Terraza del restaurante Brasa y Birra"
                 loading="lazy"
               />
@@ -303,7 +360,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   ><span class="interest-card__map-slot"
-                    ><img src="icons/google-maps.svg" alt="" /></span
+                    ><img src="assets/icons/google-maps.svg" alt="" /></span
                   ><span class="interest-card__map-label">VER EN EL MAPA</span
                   ><span class="interest-card__map-slot" aria-hidden="true"
                     >↗</span
@@ -314,7 +371,7 @@
             <article class="interest-card">
               <img
                 class="interest-card__image"
-                src="imgs/pozandevero-deporte-pistadeportiva-01.jpg"
+                src="assets/img/pozandevero-deporte-pistadeportiva-01.jpg"
                 alt="Pista deportiva de Pozán de Vero"
                 loading="lazy"
               />
@@ -332,7 +389,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   ><span class="interest-card__map-slot"
-                    ><img src="icons/google-maps.svg" alt="" /></span
+                    ><img src="assets/icons/google-maps.svg" alt="" /></span
                   ><span class="interest-card__map-label">VER EN EL MAPA</span
                   ><span class="interest-card__map-slot" aria-hidden="true"
                     >↗</span
@@ -343,6 +400,26 @@
           </div>
         </div>
       </section>
+      <section class="about-us page-width section" aria-labelledby="about-us-title">
+        <div class="about-us__inner">
+          <div class="about-us__content">
+            <p class="eyebrow eyebrow--wine">NUESTRA HISTORIA</p>
+            <h2 id="about-us-title">Sobre Nosotros</h2>
+            <p>
+              Somos Mireia y Jordi, una pareja de Barcelona que solíamos venir a menudo por la Sierra de Guara atraídos por la belleza de sus parajes y por la cantidad de actividades de aventura que en ella se pueden realizar.
+            </p>
+            <blockquote class="about-us__quote">
+              «Dejar el estrés de la ciudad para construir nuestro sueño rural.»
+            </blockquote>
+            <p>
+              Durante nuestras estancias en la zona, nos sentíamos tan a gusto y en paz que cansados del estrés de la ciudad y la rutina de nuestras vidas, decidimos probar suerte y venir a vivir aquí. Compramos Casa Perarruga, una casa grande y con muchas posibilidades y empezamos a construir poco a poco nuestro sueño de abrir un pequeño hotel rural y formar aquí nuestra familia, dónde hoy por fin ya es una realidad.
+            </p>
+          </div>
+          <div class="about-us__image-container">
+            <img src="assets/img/sobre-nosotros.jpg" alt="Mireia y Jordi en Casa Perarruga" loading="lazy" class="about-us__image" />
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="page-width footer-grid">
@@ -350,7 +427,7 @@
           <a class="brand brand--footer" href="index.html"
             ><span class="brand__mark"
               ><img
-                src="imgs/Logo-Casa-Perarruga-WP_-2.jpg"
+                src="assets/img/Logo-Casa-Perarruga-WP_-2.jpg"
                 alt="Logo de Casa Perarruga" /></span
             ><span class="brand__text"
               ><strong>Casa Perarruga</strong

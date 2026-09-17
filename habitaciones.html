@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <header class="site-header">
@@ -22,7 +22,7 @@
         <a class="brand" href="index.html" aria-label="Casa Perarruga, inicio"
           ><span class="brand__mark"
             ><img
-              src="imgs/Logo-Casa-Perarruga-WP_-2.jpg"
+              src="assets/img/Logo-Casa-Perarruga-WP_-2.jpg"
               alt="Logo de Casa Perarruga" /></span
           ><span class="brand__text"
             ><strong>Casa Perarruga</strong
@@ -37,7 +37,20 @@
         <nav class="site-nav" aria-label="Navegación principal">
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="la-casa.html">La Casa</a></li>
+            <li class="nav-dropdown">
+              <a href="la-casa.html">La Casa</a>
+              <ul class="nav-dropdown__menu">
+                <li>
+                  <a href="la-casa.html#casa-espacios">Descubre la Casa</a>
+                </li>
+                <li>
+                  <a href="la-casa.html#entorno-casa">Explora el Entorno</a>
+                </li>
+                <li>
+                  <a href="la-casa.html#about-us-title">Sobre Nosotros</a>
+                </li>
+              </ul>
+            </li>
             <li class="nav-dropdown">
               <a href="habitaciones.html" aria-current="page"
                 >Las Habitaciones</a
@@ -49,16 +62,27 @@
                 <li><a href="habitacion-syrah.html">Syrah</a></li>
               </ul>
             </li>
-            <li><a href="servicios.html">Servicios</a></li>
+            <li class="nav-dropdown">
+              <a href="servicios.html">Servicios</a>
+              <ul class="nav-dropdown__menu">
+                <li><a href="servicios.html#servicios-title">Servicios incluidos</a></li>
+                <li><a href="servicios.html#desayuno-title">Desayuno &amp; Cocina</a></li>
+                <li><a href="servicios.html#productos-title">Productos</a></li>
+                <li><a href="servicios.html#actividades-title">Actividades</a></li>
+              </ul>
+            </li>
             <li><a href="tarifas.html">Tarifas</a></li>
             <li><a href="opiniones.html">Opiniones</a></li>
-            <li><a class="nav-cta" href="contacto.html">Contacto</a></li>
+                        <li><a class="nav-cta" href="contacto.html">Contacto</a></li>
+            <li>
+              <a class="nav-cta nav-cta--booking" href="https://www.booking.com/hotel/es/casa-perarruga.es.html?label=casa-perarruga-aPDXB5siTOXOJWH2P6ihbQS466324829192%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-368432872474%3Alp9197910%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80&amp;sid=4bc61bdd47e0f33b08dd6b1c204d0a0e&amp;gclid=CjwKCAjw_KjVBhAHEiwAnC0N9K6-22BFaxeWyyTwNk_1AvTN_GtbEFXbpusUPiJRdxfGMWek1PBj7BoCmowQAvD_BwE&amp;aid=311090&amp;ucfs=1&amp;arphpl=1&amp;dest_id=-397373&amp;dest_type=city&amp;group_adults=2&amp;req_adults=2&amp;no_rooms=1&amp;group_children=0&amp;req_children=0&amp;hpos=1&amp;hapos=1&amp;sr_order=popularity&amp;srpvid=c06a6f31c897105a&amp;srepoch=1789573737&amp;from=searchresults" target="_blank" rel="noopener noreferrer">Reservar</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section class="page-hero page-width">
+      <section class="page-hero page-width rooms-hero">
         <p class="eyebrow">Duerme entre viñedos</p>
         <h1>Habitaciones confortables y con encanto</h1>
         <p>
@@ -71,14 +95,17 @@
           <article class="room-card">
             <div class="room-card__image">
               <img
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&amp;w=900&amp;auto=format&amp;fit=crop"
+                src="assets/img/Habitaciones/Garnacha/Garnacha.jpg"
                 alt="Habitación Garnacha con cama doble y decoración cálida"
                 loading="lazy"
               /><span>01</span>
             </div>
             <div class="room-card__body">
               <h2>Garnacha</h2>
-              <p>Habitación cuádruple con baño privado y balcón.</p>
+              <p>
+                Habitación para cuatro personas, ideal para familias con niños,
+                con cama de matrimonio, litera, baño privado y balcón.
+              </p>
               <a class="room-card__button" href="habitacion-garnacha.html"
                 >Ver habitación <span aria-hidden="true">→</span></a
               >
@@ -87,14 +114,17 @@
           <article class="room-card">
             <div class="room-card__image">
               <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&amp;w=900&amp;auto=format&amp;fit=crop"
+                src="assets/img/Habitaciones/Merlot/Merlot.jpg"
                 alt="Habitación Merlot con textiles naturales"
                 loading="lazy"
               /><span>02</span>
             </div>
             <div class="room-card__body">
               <h2>Merlot</h2>
-              <p>Habitación doble con baño privado y balcón.</p>
+              <p>
+                Habitación doble con cama de matrimonio, baño privado y balcón
+                con vistas a la calle.
+              </p>
               <a class="room-card__button" href="habitacion-merlot.html"
                 >Ver habitación <span aria-hidden="true">→</span></a
               >
@@ -103,14 +133,17 @@
           <article class="room-card">
             <div class="room-card__image">
               <img
-                src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&amp;w=900&amp;auto=format&amp;fit=crop"
+                src="assets/img/Habitaciones/Alcañon/Alcañon.jpg"
                 alt="Habitación Alcañón amplia para cuatro personas"
                 loading="lazy"
               /><span>03</span>
             </div>
             <div class="room-card__body">
               <h2>Alcañón</h2>
-              <p>Habitación doble en la primera planta con baño privado.</p>
+              <p>
+                Habitación doble, pequeña y acogedora, con cama de matrimonio,
+                baño privado y ventana al patio.
+              </p>
               <a class="room-card__button" href="habitacion-alcanon.html"
                 >Ver habitación <span aria-hidden="true">→</span></a
               >
@@ -119,14 +152,17 @@
           <article class="room-card">
             <div class="room-card__image">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&amp;w=900&amp;auto=format&amp;fit=crop"
+                src="assets/img/Habitaciones/Syrah/Syrah.jpg"
                 alt="Habitación Syrah con detalles de madera"
                 loading="lazy"
               /><span>04</span>
             </div>
             <div class="room-card__body">
               <h2>Syrah</h2>
-              <p>Habitación cuádruple con baño privado y balcón.</p>
+              <p>
+                Habitación para dos o cuatro personas, con dos camas
+                individuales, sofá cama de matrimonio, baño privado y balcón.
+              </p>
               <a class="room-card__button" href="habitacion-syrah.html"
                 >Ver habitación <span aria-hidden="true">→</span></a
               >
@@ -141,7 +177,7 @@
           <a class="brand brand--footer" href="index.html"
             ><span class="brand__mark"
               ><img
-                src="imgs/Logo-Casa-Perarruga-WP_-2.jpg"
+                src="assets/img/Logo-Casa-Perarruga-WP_-2.jpg"
                 alt="Logo de Casa Perarruga" /></span
             ><span class="brand__text"
               ><strong>Casa Perarruga</strong
