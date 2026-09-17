@@ -250,7 +250,7 @@ input:focus-visible + .menu-button {
   flex-direction: column;
   justify-content: flex-end;
   min-height: min(48rem, calc(100svh - 4.75rem));
-  padding-block: 5rem 1.5rem;
+  padding-block: 5rem 4rem;
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
@@ -271,7 +271,7 @@ input:focus-visible + .menu-button {
   text-transform: uppercase;
 }
 .hero .eyebrow {
-  color: var(--stone);
+  color: var(--white);
 }
 h1,
 h2,
@@ -334,6 +334,15 @@ h3 {
   background: var(--clay);
   color: var(--white);
 }
+.button--booking {
+  background: #003b95;
+  color: var(--white);
+}
+.button--booking:hover,
+.button--booking:focus-visible {
+  background: #002f78;
+  color: var(--white);
+}
 .button--secondary {
   background: var(--olive);
   color: var(--white);
@@ -366,7 +375,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
   color: var(--stone);
   font-size: 0.68rem;
   font-weight: 700;
@@ -561,22 +570,15 @@ h3 {
   line-height: 1.35;
 }
 .house-cta {
-  display: inline-block;
-  width: auto;
   align-self: flex-start;
   margin-top: auto;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
   background: var(--wine);
-  color: var(--white);
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 0.5rem 1.25rem rgb(84 47 42 / 20%);
 }
 .house-cta:hover,
 .house-cta:focus-visible {
   background: var(--clay);
   color: var(--white);
+  filter: none;
 }
 .house-slider {
   position: relative;
@@ -985,6 +987,10 @@ cite {
 .house-page .page-hero h1 {
   color: var(--white);
 }
+.page-hero .eyebrow,
+.room-detail-hero .eyebrow {
+  color: var(--stone);
+}
 .page-hero > p:last-child {
   max-width: 38rem;
   margin-bottom: 0;
@@ -993,6 +999,83 @@ cite {
 }
 .house-page .page-hero > p:last-child {
   color: var(--stone);
+}
+.house-page .page-hero > p:not(.eyebrow) {
+  max-width: 33rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.rooms-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: min(48rem, calc(100svh - 4.75rem));
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding: 5rem max(1rem, calc((100% - var(--content-width)) / 2)) 4rem;
+  color: var(--white);
+  background-image:
+    linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
+    url("imgs/105484343.jpg");
+  background-position: center;
+  background-size: cover;
+  border-bottom: 0;
+}
+.rooms-hero h1 {
+  color: var(--white);
+}
+.rooms-hero > p:last-child {
+  max-width: 33rem;
+  margin-bottom: 0;
+  color: var(--white);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.house-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0;
+}
+.house-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+.house-section-nav a:hover,
+.house-section-nav a:focus-visible {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--wine);
+  transform: translateY(-2px);
+}
+.house-section-nav a.button--booking {
+  gap: 0.75rem;
+  min-height: 3.2rem;
+  padding: 0.8rem 1.25rem;
+  border-color: transparent;
+}
+.house-section-nav a.button--booking:hover,
+.house-section-nav a.button--booking:focus-visible {
+  background: #002f78;
+  border-color: transparent;
+  color: var(--white);
+}
+#casa-espacios,
+#entorno-casa {
+  scroll-margin-top: 6rem;
 }
 .room-detail-hero {
   display: flex;
@@ -1029,10 +1112,21 @@ cite {
     url("imgs/Habitaciones/Syrah/Syrah.jpg");
 }
 .room-detail-hero h1 {
+  min-height: 2.16em;
   color: var(--white);
 }
 .room-detail-hero > p:last-child {
-  color: var(--stone);
+  max-width: 33rem;
+  min-height: 5.3rem;
+  color: var(--white);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+.hero,
+.house-page .page-hero,
+.rooms-hero,
+.room-detail-hero {
+  height: min(48rem, calc(100svh - 4.75rem));
+  min-height: 0;
 }
 .room-detail {
   display: grid;

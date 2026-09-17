@@ -44,7 +44,17 @@
         <nav class="site-nav" aria-label="Navegación principal">
           <ul>
             <li><a href="index.html" aria-current="page">Inicio</a></li>
-            <li><a href="la-casa.html">La Casa</a></li>
+            <li class="nav-dropdown">
+              <a href="la-casa.html">La Casa</a>
+              <ul class="nav-dropdown__menu">
+                <li>
+                  <a href="la-casa.html#casa-espacios">Descubre la Casa</a>
+                </li>
+                <li>
+                  <a href="la-casa.html#entorno-casa">Explora el Entorno</a>
+                </li>
+              </ul>
+            </li>
             <li class="nav-dropdown">
               <a href="habitaciones.html">Las Habitaciones</a>
               <ul class="nav-dropdown__menu">
@@ -74,8 +84,21 @@
             y sintiéndote como en casa.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="habitaciones.html"
-              >Descubre las habitaciones <span aria-hidden="true">↗</span></a
+            <a
+              class="button button--booking"
+              href="https://www.booking.com/hotel/es/casa-perarruga.es.html?label=casa-perarruga-aPDXB5siTOXOJWH2P6ihbQS466324829192%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-368432872474%3Alp9197910%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80&amp;sid=4bc61bdd47e0f33b08dd6b1c204d0a0e&amp;gclid=CjwKCAjw_KjVBhAHEiwAnC0N9K6-22BFaxeWyyTwNk_1AvTN_GtbEFXbpusUPiJRdxfGMWek1PBj7BoCmowQAvD_BwE&amp;aid=311090&amp;ucfs=1&amp;arphpl=1&amp;dest_id=-397373&amp;dest_type=city&amp;group_adults=2&amp;req_adults=2&amp;no_rooms=1&amp;group_children=0&amp;req_children=0&amp;hpos=1&amp;hapos=1&amp;sr_order=popularity&amp;srpvid=c06a6f31c897105a&amp;srepoch=1789573737&amp;from=searchresults"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg
+                class="button__icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="3" y="4.5" width="18" height="16" rx="2" />
+                <path d="M8 2.5v4M16 2.5v4M3 9h18M8 14l2 2 5-5" />
+              </svg>
+              <span>Reservar en Booking</span></a
             >
             <a class="button button--secondary" href="la-casa.html">
               <svg
