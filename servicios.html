@@ -49,7 +49,15 @@
               <li><a href="habitacion-syrah.html">Syrah</a></li>
             </ul>
           </li>
-          <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+          <li class="nav-dropdown">
+            <a href="servicios.html" aria-current="page">Servicios</a>
+            <ul class="nav-dropdown__menu">
+              <li><a href="servicios.html#servicios-title">Servicios incluidos</a></li>
+              <li><a href="servicios.html#desayuno-title">Desayuno &amp; Cocina</a></li>
+              <li><a href="servicios.html#productos-title">Productos</a></li>
+              <li><a href="servicios.html#actividades-title">Actividades</a></li>
+            </ul>
+          </li>
           <li><a href="tarifas.html">Tarifas</a></li>
           <li><a href="opiniones.html">Opiniones</a></li>
           <li><a class="nav-cta" href="contacto.html">Contacto</a></li>
@@ -74,16 +82,23 @@
         Queremos que tu estancia sea cómoda, sencilla y llena de momentos para
         recordar. Aquí encontrarás todo lo que necesitas para desconectar de verdad.
       </p>
+      <nav class="house-section-nav" aria-label="Secciones de Servicios">
+        <a href="#servicios-title">Servicios incluidos <span aria-hidden="true">↓</span></a>
+        <a href="#desayuno-title">Desayuno &amp; Cocina <span aria-hidden="true">↓</span></a>
+        <a href="#productos-title">Productos <span aria-hidden="true">↓</span></a>
+        <a href="#actividades-title">Actividades <span aria-hidden="true">↓</span></a>
+      </nav>
     </section>
 
     <!-- ═══════════════════════════════════════════
            2. SERVICIOS PRINCIPALES
       ═══════════════════════════════════════════ -->
-    <section class="svc-included section page-width" aria-labelledby="servicios-title">
-      <div class="svc-included__header">
-        <p class="eyebrow">De serie, sin sorpresas</p>
-        <h2 id="servicios-title">Lo que encontrarás en Casa Perarruga</h2>
-      </div>
+    <section class="svc-included section" aria-labelledby="servicios-title">
+      <div class="page-width">
+        <div class="svc-included__header">
+          <p class="eyebrow">De serie, sin sorpresas</p>
+          <h2 id="servicios-title">Lo que encontrarás en Casa Perarruga</h2>
+        </div>
 
       <div class="svc-grid">
         <article class="svc-card">
@@ -159,30 +174,23 @@
         </h3>
         <ul class="svc-also__list">
           <li>
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <circle cx="8" cy="8" r="3" />
-            </svg>
+            🧺
             Posibilidad de adquirir productos locales de la zona: vinos, aceites, miel y quesos del Somontano.
           </li>
           <li>
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <circle cx="8" cy="8" r="3" />
-            </svg>
+            🍇
             Posibilidad de reservar visitas guiadas a las bodegas D.O. Somontano.
           </li>
           <li>
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <circle cx="8" cy="8" r="3" />
-            </svg>
+            🧗
             Posibilidad de reservar actividades de aventura con empresa de guía de barranco.
           </li>
           <li>
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <circle cx="8" cy="8" r="3" />
-            </svg>
+            🗺️
             Amplia información de la zona a disposición de los clientes en todo momento.
           </li>
         </ul>
+      </div>
       </div>
     </section>
 
@@ -204,6 +212,12 @@
           <p class="svc-subblock__text">
             En Casa Perarruga sabemos que el desayuno es la comida más importante del día, y es por eso que podrás encontrar cada mañana una gran variedad de productos, algunos caseros como nuestros bizcochos entre otras cosas, como tostadas, embutidos, mermeladas, cereales, fruta, zumos, café, leche e infusiones.
           </p>
+          <span class="svc-badge" role="note" aria-label="Aviso especial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>¡Bajo petición desayunos para <strong>celíacos</strong> e <strong>intolerantes a la lactosa</strong>!</span>
+          </span>
           <div class="svc-mini-carousel" aria-label="Fotos del desayuno">
             <div class="svc-mini-carousel__wrapper">
               <button class="svc-carousel__control svc-carousel__control--prev" type="button" aria-label="Imagen anterior" data-target="carousel-food">
@@ -231,12 +245,6 @@
           <p class="svc-subblock__text">
             El desayuno se sirve en la cocina comedor de la casa, una estancia muy agradable que hace del desayuno un placer. También, si prefieres, puedes desayunar en nuestra terraza. Asimismo, la cocina está perfectamente equipada y a disposición de los clientes, por si prefieres algún día prepararte allí la comida o la cena.
           </p>
-          <span class="svc-badge" role="note" aria-label="Aviso especial">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            <span>¡Bajo petición desayunos para <strong>celíacos</strong> e <strong>intolerantes a la lactosa</strong>!</span>
-          </span>
           <div class="svc-mini-carousel" aria-label="Fotos de la cocina">
             <div class="svc-mini-carousel__wrapper">
               <button class="svc-carousel__control svc-carousel__control--prev" type="button" aria-label="Imagen anterior" data-target="carousel-kitchen">
@@ -261,9 +269,10 @@
     <!-- ═══════════════════════════════════════════
            4. VENTA DE PRODUCTOS DE LA ZONA
       ═══════════════════════════════════════════ -->
-    <section class="svc-products section page-width" aria-labelledby="productos-title">
-      <div class="svc-products__card">
-        <div class="svc-products__icon" aria-hidden="true">
+    <section class="svc-products section" aria-labelledby="productos-title">
+      <div class="page-width">
+        <div class="svc-products__card">
+          <div class="svc-products__icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
             stroke-linejoin="round">
             <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18" />
@@ -287,6 +296,7 @@
           </ul>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- ═══════════════════════════════════════════
@@ -299,10 +309,13 @@
             <p class="eyebrow">Descubre el entorno</p>
             <h2 id="actividades-title">Actividades en la Zona</h2>
           </div>
-          <p class="svc-activities__lead">
-            Si lo deseas, te reservamos tu actividad de barranquismo y visita guiada en bodegas de la zona. En la casa
-            encontrarás información de la zona a tu disposición.
-          </p>
+          <div class="svc-activities__intro-right">
+            <p class="svc-activities__lead">
+              Si lo deseas, te reservamos tu actividad de barranquismo y visita guiada en bodegas de la zona. En la casa
+              encontrarás información de la zona a tu disposición.
+            </p>
+            <a class="svc-activities__cta-btn" href="contacto.html">¿Quieres que te reservemos una actividad? Consúltanos</a>
+          </div>
         </div>
 
         <div class="activities-grid">
