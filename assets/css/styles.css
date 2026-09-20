@@ -1160,7 +1160,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("../img/Casa_Perarruga_Exterior.jpg");
+    url("../img/Foto_Portada_Casa.JPG");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
@@ -1220,7 +1220,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("../img/105484343.jpg");
+    url("../img/Foto_Habitaciones.JPG");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
