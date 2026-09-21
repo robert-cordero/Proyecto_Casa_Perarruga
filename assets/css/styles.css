@@ -318,7 +318,7 @@ input:focus-visible + .menu-button {
 
 .eyebrow {
   margin: 0 0 0.9rem;
-  color: #b48d81;
+  color: var(--white);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1190,7 +1190,7 @@ cite {
 
 .page-hero .eyebrow,
 .room-detail-hero .eyebrow {
-  color: #b48d81;
+  color: var(--white);
 }
 
 .page-hero > p:last-child {
@@ -2709,7 +2709,7 @@ cite {
 }
 
 .svc-page .page-hero .eyebrow {
-  color: #b48d81;
+  color: var(--white);
 }
 /* --------------------------------------------
    PÁGINA DE OPINIONES
@@ -2746,7 +2746,7 @@ cite {
 }
 
 .opinions-page .page-hero .eyebrow {
-  color: #b48d81;
+  color: var(--white);
 }
 
 .opinions-page .page-hero > p:not(.eyebrow) {
