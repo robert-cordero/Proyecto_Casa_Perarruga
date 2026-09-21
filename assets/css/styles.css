@@ -53,7 +53,7 @@ a {
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible+.menu-button {
+input:focus-visible + .menu-button {
   outline: 3px solid var(--clay);
   outline-offset: 4px;
 }
@@ -175,19 +175,19 @@ input:focus-visible+.menu-button {
   box-shadow: var(--shadow);
 }
 
-.menu-toggle:checked~.site-nav {
+.menu-toggle:checked ~ .site-nav {
   display: block;
 }
 
-.menu-toggle:checked+.menu-button span:nth-child(1) {
+.menu-toggle:checked + .menu-button span:nth-child(1) {
   transform: translateY(0.42rem) rotate(45deg);
 }
 
-.menu-toggle:checked+.menu-button span:nth-child(2) {
+.menu-toggle:checked + .menu-button span:nth-child(2) {
   opacity: 0;
 }
 
-.menu-toggle:checked+.menu-button span:nth-child(3) {
+.menu-toggle:checked + .menu-button span:nth-child(3) {
   transform: translateY(-0.42rem) rotate(-45deg);
 }
 
@@ -203,11 +203,11 @@ input:focus-visible+.menu-button {
   position: relative;
 }
 
-.nav-dropdown>a {
+.nav-dropdown > a {
   font-weight: 700;
 }
 
-.nav-dropdown>a span {
+.nav-dropdown > a span {
   display: none;
 }
 
@@ -240,7 +240,7 @@ input:focus-visible+.menu-button {
 
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu,
-.menu-toggle:checked~.site-nav .nav-dropdown__menu {
+.menu-toggle:checked ~ .site-nav .nav-dropdown__menu {
   max-height: 15rem;
   opacity: 1;
   visibility: visible;
@@ -296,7 +296,7 @@ input:focus-visible+.menu-button {
   flex-direction: column;
   justify-content: flex-end;
   min-height: min(48rem, calc(100svh - 4.75rem));
-  padding-block: 5rem 4rem;
+  padding-block: 2rem 4rem;
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
@@ -469,7 +469,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.surroundings__intro>div,
+.surroundings__intro > div,
 .surroundings__lead {
   min-width: 0;
 }
@@ -550,7 +550,7 @@ h3 {
   color: var(--wine);
 }
 
-.interest-card__content>p:last-of-type {
+.interest-card__content > p:last-of-type {
   margin-bottom: 1.25rem;
   color: var(--muted);
   font-size: 0.82rem;
@@ -804,7 +804,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.section-heading>p {
+.section-heading > p {
   max-width: 26rem;
   margin-bottom: 0;
   color: var(--muted);
@@ -959,7 +959,7 @@ h3 {
   border-top: 1px solid var(--stone);
 }
 
-.service-list article>span {
+.service-list article > span {
   display: block;
   margin-bottom: 1.25rem;
   color: var(--clay);
@@ -1003,7 +1003,7 @@ h3 {
   line-height: 0.9;
 }
 
-.rating>span {
+.rating > span {
   color: var(--stone);
   font-size: 1.2rem;
 }
@@ -1190,18 +1190,18 @@ cite {
   color: var(--stone);
 }
 
-.page-hero>p:last-child {
+.page-hero > p:last-child {
   max-width: 38rem;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.1rem;
 }
 
-.house-page .page-hero>p:last-child {
+.house-page .page-hero > p:last-child {
   color: var(--stone);
 }
 
-.house-page .page-hero>p:not(.eyebrow) {
+.house-page .page-hero > p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -1230,7 +1230,7 @@ cite {
   color: var(--white);
 }
 
-.rooms-hero>p:last-child {
+.rooms-hero > p:last-child {
   max-width: 33rem;
   margin-bottom: 0;
   color: var(--white);
@@ -1351,14 +1351,13 @@ cite {
   color: var(--white);
 }
 
-.room-detail-hero>p:last-child {
+.room-detail-hero > p:last-child {
   max-width: 33rem;
   min-height: 5.3rem;
   color: var(--white);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-.hero,
 .house-page .page-hero,
 .rooms-hero,
 .room-detail-hero {
@@ -1765,7 +1764,7 @@ cite {
     margin-bottom: 3rem;
   }
 
-  .surroundings__intro>div,
+  .surroundings__intro > div,
   .surroundings__lead {
     flex: 1 1 0;
   }
@@ -1802,7 +1801,7 @@ cite {
     padding: 1.1rem 1.2rem 1.2rem;
   }
 
-  .interest-card__content>p:last-of-type {
+  .interest-card__content > p:last-of-type {
     font-size: 0.9rem;
     line-height: 1.7;
   }
@@ -1889,7 +1888,6 @@ cite {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -1961,7 +1959,6 @@ cite {
   padding: 5rem 0 3rem;
 }
 
-
 #about-us-title {
   scroll-margin-top: 6rem;
 }
@@ -2003,7 +2000,9 @@ cite {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .svc-card:hover {
@@ -2168,7 +2167,9 @@ cite {
   color: var(--wine);
   cursor: pointer;
   backdrop-filter: blur(4px);
-  transition: background 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
   line-height: 1;
 }
 
@@ -2364,7 +2365,9 @@ cite {
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: transform 0.2s, background 0.2s;
+  transition:
+    transform 0.2s,
+    background 0.2s;
 }
 
 .svc-activities__cta-btn:hover {
@@ -2392,7 +2395,9 @@ cite {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .activity-card:hover {
@@ -2474,7 +2479,9 @@ cite {
   letter-spacing: 0.02em;
   border-bottom: 1px dashed currentColor;
   padding-bottom: 0.1rem;
-  transition: color 0.18s ease, transform 0.18s ease;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
   align-self: flex-start;
 }
 
@@ -2687,14 +2694,14 @@ cite {
   max-width: none;
 }
 
-.svc-page .page-hero>p:not(.eyebrow) {
+.svc-page .page-hero > p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
   color: var(--white);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-.svc-page .page-hero>p:last-child {
+.svc-page .page-hero > p:last-child {
   color: var(--white);
 }
 
@@ -2739,7 +2746,7 @@ cite {
   color: var(--stone);
 }
 
-.opinions-page .page-hero>p:not(.eyebrow) {
+.opinions-page .page-hero > p:not(.eyebrow) {
   max-width: 38rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -2862,11 +2869,13 @@ cite {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .review-card:hover {
-  box-shadow: 0 8px 24px rgba(84,47,42,0.10);
+  box-shadow: 0 8px 24px rgba(84, 47, 42, 0.1);
   transform: translateY(-3px);
 }
 
@@ -2945,7 +2954,10 @@ cite {
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
 }
 
 .reviews-cta__btn:hover {
@@ -2989,7 +3001,7 @@ cite {
   color: var(--stone);
 }
 
-.contact-page-wrap .page-hero>p:not(.eyebrow) {
+.contact-page-wrap .page-hero > p:not(.eyebrow) {
   max-width: 38rem;
   margin-bottom: 1rem;
   color: var(--white);
