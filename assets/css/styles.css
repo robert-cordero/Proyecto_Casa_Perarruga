@@ -305,22 +305,25 @@ input:focus-visible + .menu-button {
   background-size: cover;
 }
 
+#hero-title {
+  max-width: 13ch;
+  margin-bottom: 1.25rem;
+  color: var(--white);
+  font-size: clamp(2.8rem, 9vw, 6rem);
+}
+
 .hero__content {
   margin-inline: auto;
 }
 
 .eyebrow {
   margin: 0 0 0.9rem;
-  color: var(--clay);
+  color: #b48d81;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   line-height: 1.4;
   text-transform: uppercase;
-}
-
-.hero .eyebrow {
-  color: var(--stone);
 }
 
 h1,
@@ -1187,7 +1190,7 @@ cite {
 
 .page-hero .eyebrow,
 .room-detail-hero .eyebrow {
-  color: var(--stone);
+  color: #b48d81;
 }
 
 .page-hero > p:last-child {
@@ -2691,7 +2694,7 @@ cite {
 
 .svc-page .page-hero h1 {
   color: var(--white);
-  max-width: none;
+  max-width: 13inch;
 }
 
 .svc-page .page-hero > p:not(.eyebrow) {
@@ -2706,7 +2709,7 @@ cite {
 }
 
 .svc-page .page-hero .eyebrow {
-  color: var(--stone);
+  color: #b48d81;
 }
 /* --------------------------------------------
    PÁGINA DE OPINIONES
@@ -2739,11 +2742,11 @@ cite {
 
 .opinions-page .page-hero h1 {
   color: var(--white);
-  max-width: none;
+  max-width: 13inch;
 }
 
 .opinions-page .page-hero .eyebrow {
-  color: var(--stone);
+  color: #b48d81;
 }
 
 .opinions-page .page-hero > p:not(.eyebrow) {
