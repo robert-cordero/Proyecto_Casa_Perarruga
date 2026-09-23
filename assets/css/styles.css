@@ -1174,14 +1174,21 @@ cite {
   order: 2;
 }
 
-.page-hero h1 {
+.page-hero h1,
+.hero h1,
+.svc-page .page-hero h1,
+.opinions-page .page-hero h1 {
   max-width: 13ch;
   margin-bottom: 1.25rem;
   color: var(--wine);
   font-size: clamp(2.8rem, 9vw, 6rem);
 }
 
-.house-page .page-hero h1 {
+/*titulos*/
+.house-page .page-hero h1,
+.hero h1,
+.svc-page .page-hero h1,
+.opinions-page .page-hero h1 {
   color: var(--white);
 }
 
@@ -2689,11 +2696,6 @@ cite {
   border-bottom: 0;
 }
 
-.svc-page .page-hero h1 {
-  color: var(--white);
-  max-width: none;
-}
-
 .svc-page .page-hero > p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
@@ -2735,11 +2737,6 @@ cite {
   background-size: cover;
   border-bottom: 0;
   text-align: left;
-}
-
-.opinions-page .page-hero h1 {
-  color: var(--white);
-  max-width: none;
 }
 
 .opinions-page .page-hero .eyebrow {
@@ -2985,7 +2982,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("../img/Casa_Perarruga_Exterior.jpg");
+    url("../img/Azud.jpg");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
