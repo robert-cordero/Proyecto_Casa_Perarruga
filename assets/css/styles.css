@@ -53,7 +53,7 @@ a {
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible+.menu-button {
+input:focus-visible + .menu-button {
   outline: 3px solid var(--clay);
   outline-offset: 4px;
 }
@@ -175,19 +175,19 @@ input:focus-visible+.menu-button {
   box-shadow: var(--shadow);
 }
 
-.menu-toggle:checked~.site-nav {
+.menu-toggle:checked ~ .site-nav {
   display: block;
 }
 
-.menu-toggle:checked+.menu-button span:nth-child(1) {
+.menu-toggle:checked + .menu-button span:nth-child(1) {
   transform: translateY(0.42rem) rotate(45deg);
 }
 
-.menu-toggle:checked+.menu-button span:nth-child(2) {
+.menu-toggle:checked + .menu-button span:nth-child(2) {
   opacity: 0;
 }
 
-.menu-toggle:checked+.menu-button span:nth-child(3) {
+.menu-toggle:checked + .menu-button span:nth-child(3) {
   transform: translateY(-0.42rem) rotate(-45deg);
 }
 
@@ -203,11 +203,11 @@ input:focus-visible+.menu-button {
   position: relative;
 }
 
-.nav-dropdown>a {
+.nav-dropdown > a {
   font-weight: 700;
 }
 
-.nav-dropdown>a span {
+.nav-dropdown > a span {
   display: none;
 }
 
@@ -240,7 +240,7 @@ input:focus-visible+.menu-button {
 
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu,
-.menu-toggle:checked~.site-nav .nav-dropdown__menu {
+.menu-toggle:checked ~ .site-nav .nav-dropdown__menu {
   max-height: 15rem;
   opacity: 1;
   visibility: visible;
@@ -296,7 +296,7 @@ input:focus-visible+.menu-button {
   flex-direction: column;
   justify-content: flex-end;
   min-height: min(48rem, calc(100svh - 4.75rem));
-  padding-block: 5rem 4rem;
+  padding-block: 2rem 4rem;
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
@@ -469,7 +469,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.surroundings__intro>div,
+.surroundings__intro > div,
 .surroundings__lead {
   min-width: 0;
 }
@@ -550,7 +550,7 @@ h3 {
   color: var(--wine);
 }
 
-.interest-card__content>p:last-of-type {
+.interest-card__content > p:last-of-type {
   margin-bottom: 1.25rem;
   color: var(--muted);
   font-size: 0.82rem;
@@ -666,7 +666,7 @@ h3 {
 
 .house-cta {
   align-self: flex-start;
-  margin-top: auto;
+  margin-top: 25px;
   background: var(--wine);
 }
 
@@ -804,7 +804,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.section-heading>p {
+.section-heading > p {
   max-width: 26rem;
   margin-bottom: 0;
   color: var(--muted);
@@ -959,7 +959,7 @@ h3 {
   border-top: 1px solid var(--stone);
 }
 
-.service-list article>span {
+.service-list article > span {
   display: block;
   margin-bottom: 1.25rem;
   color: var(--clay);
@@ -1003,7 +1003,7 @@ h3 {
   line-height: 0.9;
 }
 
-.rating>span {
+.rating > span {
   color: var(--stone);
   font-size: 1.2rem;
 }
@@ -1160,7 +1160,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("../img/Casa_Perarruga_Exterior.jpg");
+    url("../img/Foto_Portada_Casa.JPG");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
@@ -1174,14 +1174,21 @@ cite {
   order: 2;
 }
 
-.page-hero h1 {
+.page-hero h1,
+.hero h1,
+.svc-page .page-hero h1,
+.opinions-page .page-hero h1 {
   max-width: 13ch;
   margin-bottom: 1.25rem;
   color: var(--wine);
   font-size: clamp(2.8rem, 9vw, 6rem);
 }
 
-.house-page .page-hero h1 {
+/*titulos*/
+.house-page .page-hero h1,
+.hero h1,
+.svc-page .page-hero h1,
+.opinions-page .page-hero h1 {
   color: var(--white);
 }
 
@@ -1190,18 +1197,18 @@ cite {
   color: var(--stone);
 }
 
-.page-hero>p:last-child {
+.page-hero > p:last-child {
   max-width: 38rem;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.1rem;
 }
 
-.house-page .page-hero>p:last-child {
+.house-page .page-hero > p:last-child {
   color: var(--stone);
 }
 
-.house-page .page-hero>p:not(.eyebrow) {
+.house-page .page-hero > p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -1220,7 +1227,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("../img/105484343.jpg");
+    url("../img/Foto_Habitaciones.JPG");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
@@ -1230,7 +1237,7 @@ cite {
   color: var(--white);
 }
 
-.rooms-hero>p:last-child {
+.rooms-hero > p:last-child {
   max-width: 33rem;
   margin-bottom: 0;
   color: var(--white);
@@ -1351,14 +1358,13 @@ cite {
   color: var(--white);
 }
 
-.room-detail-hero>p:last-child {
+.room-detail-hero > p:last-child {
   max-width: 33rem;
   min-height: 5.3rem;
   color: var(--white);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-.hero,
 .house-page .page-hero,
 .rooms-hero,
 .room-detail-hero {
@@ -1485,14 +1491,17 @@ cite {
 }
 
 .room-amenities__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Esto es lo que centra la tarjeta inferior */
   gap: 1.25rem;
   max-width: 50rem;
   margin: 0 auto;
 }
 
 .room-amenities__card {
+  flex: 0 0 calc(50% - 0.65rem); /* Calcula el tamaño exacto para que quepan dos por fila */
+  min-width: 22rem;
   border: 1px solid var(--stone);
   border-radius: var(--radius);
   overflow: hidden;
@@ -1765,7 +1774,7 @@ cite {
     margin-bottom: 3rem;
   }
 
-  .surroundings__intro>div,
+  .surroundings__intro > div,
   .surroundings__lead {
     flex: 1 1 0;
   }
@@ -1802,7 +1811,7 @@ cite {
     padding: 1.1rem 1.2rem 1.2rem;
   }
 
-  .interest-card__content>p:last-of-type {
+  .interest-card__content > p:last-of-type {
     font-size: 0.9rem;
     line-height: 1.7;
   }
@@ -1889,7 +1898,6 @@ cite {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -1961,7 +1969,6 @@ cite {
   padding: 5rem 0 3rem;
 }
 
-
 #about-us-title {
   scroll-margin-top: 6rem;
 }
@@ -2003,7 +2010,9 @@ cite {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .svc-card:hover {
@@ -2168,7 +2177,9 @@ cite {
   color: var(--wine);
   cursor: pointer;
   backdrop-filter: blur(4px);
-  transition: background 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
   line-height: 1;
 }
 
@@ -2357,20 +2368,29 @@ cite {
 
 .svc-activities__cta-btn {
   display: inline-flex;
-  background: #6b2c3a;
-  color: #ffffff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
+  justify-content: center; /* Centra el texto horizontalmente */
+  text-align: center; /* Garantiza que las dos líneas en móvil queden simétricas */
+  background: var(--wine); /* Usa el color principal exacto de la web */
+  color: var(--white) !important;
+  padding: 0.9rem 1.8rem; /* Da un poco más de aire alrededor del texto */
+  border-radius: 0.5rem; /* Cambia la forma de "píldora" por un rectángulo redondeado más elegante */
+  font-weight: 700;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: transform 0.2s, background 0.2s;
+  line-height: 1.4; /* Mejora la legibilidad cuando el texto salta a la segunda línea */
+  box-shadow: 0 0.4rem 1rem rgba(84, 47, 42, 0.2); /* Añade una sombra suave para darle profundidad */
+  transition: all 0.25s ease;
 }
 
-.svc-activities__cta-btn:hover {
-  background: var(--wine);
-  transform: translateY(-2px);
-  color: #ffffff;
+.svc-activities__cta-btn:hover,
+.svc-activities__cta-btn:focus-visible {
+  background: var(
+    --clay
+  ); /* Cambia al color arcilla al pasar el ratón, como los demás botones */
+  transform: translateY(
+    -3px
+  ); /* Efecto de levitación un poco más pronunciado */
+  box-shadow: 0 0.6rem 1.5rem rgba(84, 47, 42, 0.3); /* La sombra se amplía al flotar */
 }
 
 .activities-grid {
@@ -2392,7 +2412,9 @@ cite {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .activity-card:hover {
@@ -2474,7 +2496,9 @@ cite {
   letter-spacing: 0.02em;
   border-bottom: 1px dashed currentColor;
   padding-bottom: 0.1rem;
-  transition: color 0.18s ease, transform 0.18s ease;
+  transition:
+    color 0.18s ease,
+    transform 0.18s ease;
   align-self: flex-start;
 }
 
@@ -2682,19 +2706,14 @@ cite {
   border-bottom: 0;
 }
 
-.svc-page .page-hero h1 {
-  color: var(--white);
-  max-width: none;
-}
-
-.svc-page .page-hero>p:not(.eyebrow) {
+.svc-page .page-hero > p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
   color: var(--white);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-.svc-page .page-hero>p:last-child {
+.svc-page .page-hero > p:last-child {
   color: var(--white);
 }
 
@@ -2730,16 +2749,11 @@ cite {
   text-align: left;
 }
 
-.opinions-page .page-hero h1 {
-  color: var(--white);
-  max-width: none;
-}
-
 .opinions-page .page-hero .eyebrow {
   color: var(--stone);
 }
 
-.opinions-page .page-hero>p:not(.eyebrow) {
+.opinions-page .page-hero > p:not(.eyebrow) {
   max-width: 38rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -2862,11 +2876,13 @@ cite {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .review-card:hover {
-  box-shadow: 0 8px 24px rgba(84,47,42,0.10);
+  box-shadow: 0 8px 24px rgba(84, 47, 42, 0.1);
   transform: translateY(-3px);
 }
 
@@ -2945,7 +2961,10 @@ cite {
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
 }
 
 .reviews-cta__btn:hover {
@@ -2973,7 +2992,7 @@ cite {
   color: var(--white);
   background-image:
     linear-gradient(100deg, rgb(41 39 35 / 78%) 0%, rgb(41 39 35 / 38%) 70%),
-    url("../img/Casa_Perarruga_Exterior.jpg");
+    url("../img/Azud.jpg");
   background-position: center;
   background-size: cover;
   border-bottom: 0;
@@ -2989,7 +3008,7 @@ cite {
   color: var(--stone);
 }
 
-.contact-page-wrap .page-hero>p:not(.eyebrow) {
+.contact-page-wrap .page-hero > p:not(.eyebrow) {
   max-width: 38rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -3135,13 +3154,14 @@ cite {
   text-decoration: underline;
 }
 /* Google Maps Header Button */
-/* Google Maps Header Button */
 .site-nav .nav-cta.nav-cta--maps {
-  background: transparent;
-  padding: 0.5rem;
+  background: #f0f0f0; /* Gris muy clarito */
+  border-radius: 6px; /* Bordes suaves para que parezca un botón */
+  padding: 0.5rem 0.6rem; /* Espacio interior para que respire el icono */
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 180ms ease;
 }
 
 .site-nav .nav-cta.nav-cta--maps img {
@@ -3152,17 +3172,125 @@ cite {
 
 .site-nav .nav-cta.nav-cta--maps:hover,
 .site-nav .nav-cta.nav-cta--maps:focus-visible {
-  background: var(--paper);
+  background: #e4e4e4; /* Un gris un pelín más oscuro al pasar el ratón */
   filter: brightness(1);
-  border-radius: 4px;
 }
 
 @media (min-width: 60rem) {
   /* En escritorio, lo sacamos del flujo para que no empuje las palabras */
   .site-nav li:has(.nav-cta--maps) {
     position: absolute;
-    right: -3rem;
+    right: -3.7rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. CARRUSELES MÓVILES (Habitaciones y La Casa) */
+  /* Hemos quitado las clases de "room-amenities" de aquí */
+  /* 1. CARRUSELES MÓVILES (Habitaciones, La Casa, Servicios y Actividades) */
+  .room-grid,
+  .floor-list,
+  .svc-grid,
+  .activities-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 1rem !important;
+    padding-bottom: 1rem !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    align-items: stretch !important;
+  }
+
+  /* Ocultar barra de scroll de los carruseles */
+  .room-grid::-webkit-scrollbar,
+  .floor-list::-webkit-scrollbar,
+  .svc-grid::-webkit-scrollbar,
+  .activities-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Tamaño unificado para que se asome la siguiente tarjeta */
+  .room-card,
+  .detail-card,
+  .svc-card,
+  .activity-card {
+    flex: 0 0 85% !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* 2. ACORDEÓN DE CARACTERÍSTICAS (Nuevo) */
+  .room-amenities__cards {
+    display: block !important; /* Desactiva el carrusel y las apila */
+  }
+
+  .room-amenities__card {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .room-amenities__card-header {
+    justify-content: space-between !important;
+    cursor: pointer;
+  }
+
+  .header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .accordion-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  /* Ocultamos el contenido (tabla) por defecto en móvil */
+  .room-amenities__card-content {
+    display: none;
+  }
+
+  /* Clase que mostrará el contenido al hacer clic */
+  .room-amenities__card-content.active {
+    display: block;
+  }
+
+  /* 3. MEJORA DEL MENÚ MÓVIL */
+  /* Oculta los submenús desplegables */
+  .site-nav .nav-dropdown__menu {
+    display: none !important;
+  }
+
+  /* Formato solo para los enlaces de texto (Inicio, La Casa, etc.) */
+  .site-nav a:not(.nav-cta) {
+    padding: 1.1rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    border-bottom: 1px solid rgb(229 220 205 / 40%) !important;
+    text-align: center !important; /* <-- Esta línea centra las palabras */
+  }
+
+  /* Botones de acción (Contacto y Reservar) más pequeños */
+  .site-nav .nav-cta:not(.nav-cta--maps) {
+    border-bottom: none !important;
+    padding: 0.75rem 1rem !important; /* Reduce la altura interior */
+    font-size: 0.95rem !important; /* Reduce el tamaño de letra */
+    width: calc(100% - 5rem) !important; /* Hace los botones más estrechos */
+    margin-left: 2.5rem !important; /* Mantiene los botones centrados */
+    border-radius: 6px !important;
+    margin-bottom: 0.75rem !important; /* Espacio entre los dos botones */
+  }
+
+  /* Separación extra para despegar los botones de la lista principal */
+  .site-nav a[href="contacto.html"] {
+    margin-top: 2.5rem !important; /* Empuja el botón "Contacto" hacia abajo */
+  }
+
+  /* Ocultar el botón de Google Maps en móvil */
+  .site-nav .nav-cta.nav-cta--maps {
+    display: none !important;
   }
 }
