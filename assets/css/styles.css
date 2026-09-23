@@ -666,7 +666,7 @@ h3 {
 
 .house-cta {
   align-self: flex-start;
-  margin-top: auto;
+  margin-top: 25px;
   background: var(--wine);
 }
 
@@ -1491,14 +1491,17 @@ cite {
 }
 
 .room-amenities__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Esto es lo que centra la tarjeta inferior */
   gap: 1.25rem;
   max-width: 50rem;
   margin: 0 auto;
 }
 
 .room-amenities__card {
+  flex: 0 0 calc(50% - 0.65rem); /* Calcula el tamaño exacto para que quepan dos por fila */
+  min-width: 22rem;
   border: 1px solid var(--stone);
   border-radius: var(--radius);
   overflow: hidden;
@@ -2365,22 +2368,29 @@ cite {
 
 .svc-activities__cta-btn {
   display: inline-flex;
-  background: #6b2c3a;
-  color: #ffffff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
+  justify-content: center; /* Centra el texto horizontalmente */
+  text-align: center; /* Garantiza que las dos líneas en móvil queden simétricas */
+  background: var(--wine); /* Usa el color principal exacto de la web */
+  color: var(--white) !important;
+  padding: 0.9rem 1.8rem; /* Da un poco más de aire alrededor del texto */
+  border-radius: 0.5rem; /* Cambia la forma de "píldora" por un rectángulo redondeado más elegante */
+  font-weight: 700;
   text-decoration: none;
   font-size: 0.95rem;
-  transition:
-    transform 0.2s,
-    background 0.2s;
+  line-height: 1.4; /* Mejora la legibilidad cuando el texto salta a la segunda línea */
+  box-shadow: 0 0.4rem 1rem rgba(84, 47, 42, 0.2); /* Añade una sombra suave para darle profundidad */
+  transition: all 0.25s ease;
 }
 
-.svc-activities__cta-btn:hover {
-  background: var(--wine);
-  transform: translateY(-2px);
-  color: #ffffff;
+.svc-activities__cta-btn:hover,
+.svc-activities__cta-btn:focus-visible {
+  background: var(
+    --clay
+  ); /* Cambia al color arcilla al pasar el ratón, como los demás botones */
+  transform: translateY(
+    -3px
+  ); /* Efecto de levitación un poco más pronunciado */
+  box-shadow: 0 0.6rem 1.5rem rgba(84, 47, 42, 0.3); /* La sombra se amplía al flotar */
 }
 
 .activities-grid {
@@ -3144,13 +3154,14 @@ cite {
   text-decoration: underline;
 }
 /* Google Maps Header Button */
-/* Google Maps Header Button */
 .site-nav .nav-cta.nav-cta--maps {
-  background: transparent;
-  padding: 0.5rem;
+  background: #f0f0f0; /* Gris muy clarito */
+  border-radius: 6px; /* Bordes suaves para que parezca un botón */
+  padding: 0.5rem 0.6rem; /* Espacio interior para que respire el icono */
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 180ms ease;
 }
 
 .site-nav .nav-cta.nav-cta--maps img {
@@ -3161,17 +3172,125 @@ cite {
 
 .site-nav .nav-cta.nav-cta--maps:hover,
 .site-nav .nav-cta.nav-cta--maps:focus-visible {
-  background: var(--paper);
+  background: #e4e4e4; /* Un gris un pelín más oscuro al pasar el ratón */
   filter: brightness(1);
-  border-radius: 4px;
 }
 
 @media (min-width: 60rem) {
   /* En escritorio, lo sacamos del flujo para que no empuje las palabras */
   .site-nav li:has(.nav-cta--maps) {
     position: absolute;
-    right: -3rem;
+    right: -3.7rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. CARRUSELES MÓVILES (Habitaciones y La Casa) */
+  /* Hemos quitado las clases de "room-amenities" de aquí */
+  /* 1. CARRUSELES MÓVILES (Habitaciones, La Casa, Servicios y Actividades) */
+  .room-grid,
+  .floor-list,
+  .svc-grid,
+  .activities-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 1rem !important;
+    padding-bottom: 1rem !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    align-items: stretch !important;
+  }
+
+  /* Ocultar barra de scroll de los carruseles */
+  .room-grid::-webkit-scrollbar,
+  .floor-list::-webkit-scrollbar,
+  .svc-grid::-webkit-scrollbar,
+  .activities-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Tamaño unificado para que se asome la siguiente tarjeta */
+  .room-card,
+  .detail-card,
+  .svc-card,
+  .activity-card {
+    flex: 0 0 85% !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* 2. ACORDEÓN DE CARACTERÍSTICAS (Nuevo) */
+  .room-amenities__cards {
+    display: block !important; /* Desactiva el carrusel y las apila */
+  }
+
+  .room-amenities__card {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .room-amenities__card-header {
+    justify-content: space-between !important;
+    cursor: pointer;
+  }
+
+  .header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .accordion-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  /* Ocultamos el contenido (tabla) por defecto en móvil */
+  .room-amenities__card-content {
+    display: none;
+  }
+
+  /* Clase que mostrará el contenido al hacer clic */
+  .room-amenities__card-content.active {
+    display: block;
+  }
+
+  /* 3. MEJORA DEL MENÚ MÓVIL */
+  /* Oculta los submenús desplegables */
+  .site-nav .nav-dropdown__menu {
+    display: none !important;
+  }
+
+  /* Formato solo para los enlaces de texto (Inicio, La Casa, etc.) */
+  .site-nav a:not(.nav-cta) {
+    padding: 1.1rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    border-bottom: 1px solid rgb(229 220 205 / 40%) !important;
+    text-align: center !important; /* <-- Esta línea centra las palabras */
+  }
+
+  /* Botones de acción (Contacto y Reservar) más pequeños */
+  .site-nav .nav-cta:not(.nav-cta--maps) {
+    border-bottom: none !important;
+    padding: 0.75rem 1rem !important; /* Reduce la altura interior */
+    font-size: 0.95rem !important; /* Reduce el tamaño de letra */
+    width: calc(100% - 5rem) !important; /* Hace los botones más estrechos */
+    margin-left: 2.5rem !important; /* Mantiene los botones centrados */
+    border-radius: 6px !important;
+    margin-bottom: 0.75rem !important; /* Espacio entre los dos botones */
+  }
+
+  /* Separación extra para despegar los botones de la lista principal */
+  .site-nav a[href="contacto.html"] {
+    margin-top: 2.5rem !important; /* Empuja el botón "Contacto" hacia abajo */
+  }
+
+  /* Ocultar el botón de Google Maps en móvil */
+  .site-nav .nav-cta.nav-cta--maps {
+    display: none !important;
   }
 }
