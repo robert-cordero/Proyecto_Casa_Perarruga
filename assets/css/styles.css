@@ -3190,10 +3190,12 @@ cite {
   /* 1. CARRUSELES MÓVILES (Habitaciones y La Casa) */
   /* Hemos quitado las clases de "room-amenities" de aquí */
   /* 1. CARRUSELES MÓVILES (Habitaciones, La Casa, Servicios y Actividades) */
+  /* 1. CARRUSELES MÓVILES (Habitaciones, La Casa, Servicios, Actividades y Opiniones) */
   .room-grid,
   .floor-list,
   .svc-grid,
-  .activities-grid {
+  .activities-grid,
+  .reviews-grid {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
@@ -3209,7 +3211,8 @@ cite {
   .room-grid::-webkit-scrollbar,
   .floor-list::-webkit-scrollbar,
   .svc-grid::-webkit-scrollbar,
-  .activities-grid::-webkit-scrollbar {
+  .activities-grid::-webkit-scrollbar,
+  .reviews-grid::-webkit-scrollbar {
     display: none !important;
   }
 
@@ -3217,7 +3220,8 @@ cite {
   .room-card,
   .detail-card,
   .svc-card,
-  .activity-card {
+  .activity-card,
+  .review-card {
     flex: 0 0 85% !important;
     scroll-snap-align: start !important;
   }
@@ -3292,5 +3296,37 @@ cite {
   /* Ocultar el botón de Google Maps en móvil */
   .site-nav .nav-cta.nav-cta--maps {
     display: none !important;
+  }
+
+  /* Organizar los botones del Hero al ancho de la palabra más larga en móvil */
+  .house-section-nav {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: flex-start; /* <-- Esta es la clave: evita que el fondo estire la botonera */
+  }
+
+  .house-section-nav a {
+    justify-content: space-between;
+    width: auto;
+  }
+
+  /* Botón de opiniones equilibrado para móvil */
+  .reviews-cta {
+    display: flex;
+    justify-content: center; /* Centra el botón en la pantalla */
+  }
+
+  .reviews-cta__btn {
+    width: min(
+      100%,
+      20rem
+    ); /* No ocupará más de 20rem, adaptándose si la pantalla es menor */
+    white-space: normal; /* Permite que el texto baje de línea de forma natural */
+    text-align: center; /* Centra el texto */
+    justify-content: center; /* Centra el contenido interior (icono y texto) */
+    font-size: 0.9rem; /* Tamaño de letra equilibrado */
+    padding: 0.8rem 1.2rem; /* Espaciado interior cómodo */
+    line-height: 1.35; /* Separa un poco las dos líneas para que respiren */
   }
 }
