@@ -3377,4 +3377,14 @@ cite {
     ) !important; /* Cambia el negro puro por el gris elegante del texto general */
     line-height: 1.5;
   }
+
+  /* Solucionar el solapamiento en los Hero de las páginas de detalle y secundarias en móvil */
+  .house-page .page-hero,
+  .rooms-hero,
+  .room-detail-hero {
+    height: auto !important;
+    min-height: 65svh !important;
+    padding-top: 6rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
