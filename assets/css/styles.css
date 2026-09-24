@@ -3378,13 +3378,13 @@ cite {
     line-height: 1.5;
   }
 
-  /* Solucionar el solapamiento en los Hero de las páginas de detalle y secundarias en móvil */
-  .house-page .page-hero,
-  .rooms-hero,
-  .room-detail-hero {
+  /* Corregir el solapamiento de galería y texto en iPhone (Safari Bug) */
+  .room-gallery img {
     height: auto !important;
-    min-height: 65svh !important;
-    padding-top: 6rem !important;
-    padding-bottom: 3rem !important;
+    aspect-ratio: 3 / 4 !important; /* Fuerza una altura exacta a las 2 fotos pequeñas */
+  }
+
+  .room-gallery img:first-child {
+    aspect-ratio: 16 / 10 !important; /* Asegura que la foto principal siga siendo ancha */
   }
 }
