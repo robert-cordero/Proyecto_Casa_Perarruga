@@ -53,7 +53,7 @@ a {
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible + .menu-button {
+input:focus-visible+.menu-button {
   outline: 3px solid var(--clay);
   outline-offset: 4px;
 }
@@ -175,19 +175,19 @@ input:focus-visible + .menu-button {
   box-shadow: var(--shadow);
 }
 
-.menu-toggle:checked ~ .site-nav {
+.menu-toggle:checked~.site-nav {
   display: block;
 }
 
-.menu-toggle:checked + .menu-button span:nth-child(1) {
+.menu-toggle:checked+.menu-button span:nth-child(1) {
   transform: translateY(0.42rem) rotate(45deg);
 }
 
-.menu-toggle:checked + .menu-button span:nth-child(2) {
+.menu-toggle:checked+.menu-button span:nth-child(2) {
   opacity: 0;
 }
 
-.menu-toggle:checked + .menu-button span:nth-child(3) {
+.menu-toggle:checked+.menu-button span:nth-child(3) {
   transform: translateY(-0.42rem) rotate(-45deg);
 }
 
@@ -203,11 +203,11 @@ input:focus-visible + .menu-button {
   position: relative;
 }
 
-.nav-dropdown > a {
+.nav-dropdown>a {
   font-weight: 700;
 }
 
-.nav-dropdown > a span {
+.nav-dropdown>a span {
   display: none;
 }
 
@@ -240,7 +240,7 @@ input:focus-visible + .menu-button {
 
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu,
-.menu-toggle:checked ~ .site-nav .nav-dropdown__menu {
+.menu-toggle:checked~.site-nav .nav-dropdown__menu {
   max-height: 15rem;
   opacity: 1;
   visibility: visible;
@@ -469,7 +469,7 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.surroundings__intro > div,
+.surroundings__intro>div,
 .surroundings__lead {
   min-width: 0;
 }
@@ -550,7 +550,7 @@ h3 {
   color: var(--wine);
 }
 
-.interest-card__content > p:last-of-type {
+.interest-card__content>p:last-of-type {
   margin-bottom: 1.25rem;
   color: var(--muted);
   font-size: 0.82rem;
@@ -804,7 +804,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.section-heading > p {
+.section-heading>p {
   max-width: 26rem;
   margin-bottom: 0;
   color: var(--muted);
@@ -959,7 +959,7 @@ h3 {
   border-top: 1px solid var(--stone);
 }
 
-.service-list article > span {
+.service-list article>span {
   display: block;
   margin-bottom: 1.25rem;
   color: var(--clay);
@@ -1003,7 +1003,7 @@ h3 {
   line-height: 0.9;
 }
 
-.rating > span {
+.rating>span {
   color: var(--stone);
   font-size: 1.2rem;
 }
@@ -1197,18 +1197,18 @@ cite {
   color: var(--stone);
 }
 
-.page-hero > p:last-child {
+.page-hero>p:last-child {
   max-width: 38rem;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.1rem;
 }
 
-.house-page .page-hero > p:last-child {
+.house-page .page-hero>p:last-child {
   color: var(--stone);
 }
 
-.house-page .page-hero > p:not(.eyebrow) {
+.house-page .page-hero>p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -1237,7 +1237,7 @@ cite {
   color: var(--white);
 }
 
-.rooms-hero > p:last-child {
+.rooms-hero>p:last-child {
   max-width: 33rem;
   margin-bottom: 0;
   color: var(--white);
@@ -1358,7 +1358,7 @@ cite {
   color: var(--white);
 }
 
-.room-detail-hero > p:last-child {
+.room-detail-hero>p:last-child {
   max-width: 33rem;
   min-height: 5.3rem;
   color: var(--white);
@@ -1493,14 +1493,16 @@ cite {
 .room-amenities__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Esto es lo que centra la tarjeta inferior */
+  justify-content: center;
+  /* Esto es lo que centra la tarjeta inferior */
   gap: 1.25rem;
   max-width: 50rem;
   margin: 0 auto;
 }
 
 .room-amenities__card {
-  flex: 0 0 calc(50% - 0.65rem); /* Calcula el tamaño exacto para que quepan dos por fila */
+  flex: 0 0 calc(50% - 0.65rem);
+  /* Calcula el tamaño exacto para que quepan dos por fila */
   min-width: 22rem;
   border: 1px solid var(--stone);
   border-radius: var(--radius);
@@ -1774,7 +1776,7 @@ cite {
     margin-bottom: 3rem;
   }
 
-  .surroundings__intro > div,
+  .surroundings__intro>div,
   .surroundings__lead {
     flex: 1 1 0;
   }
@@ -1811,7 +1813,7 @@ cite {
     padding: 1.1rem 1.2rem 1.2rem;
   }
 
-  .interest-card__content > p:last-of-type {
+  .interest-card__content>p:last-of-type {
     font-size: 0.9rem;
     line-height: 1.7;
   }
@@ -1898,6 +1900,7 @@ cite {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -2368,29 +2371,35 @@ cite {
 
 .svc-activities__cta-btn {
   display: inline-flex;
-  justify-content: center; /* Centra el texto horizontalmente */
-  text-align: center; /* Garantiza que las dos líneas en móvil queden simétricas */
-  background: var(--wine); /* Usa el color principal exacto de la web */
+  justify-content: center;
+  /* Centra el texto horizontalmente */
+  text-align: center;
+  /* Garantiza que las dos líneas en móvil queden simétricas */
+  background: var(--wine);
+  /* Usa el color principal exacto de la web */
   color: var(--white) !important;
-  padding: 0.9rem 1.8rem; /* Da un poco más de aire alrededor del texto */
-  border-radius: 0.5rem; /* Cambia la forma de "píldora" por un rectángulo redondeado más elegante */
+  padding: 0.9rem 1.8rem;
+  /* Da un poco más de aire alrededor del texto */
+  border-radius: 0.5rem;
+  /* Cambia la forma de "píldora" por un rectángulo redondeado más elegante */
   font-weight: 700;
   text-decoration: none;
   font-size: 0.95rem;
-  line-height: 1.4; /* Mejora la legibilidad cuando el texto salta a la segunda línea */
-  box-shadow: 0 0.4rem 1rem rgba(84, 47, 42, 0.2); /* Añade una sombra suave para darle profundidad */
+  line-height: 1.4;
+  /* Mejora la legibilidad cuando el texto salta a la segunda línea */
+  box-shadow: 0 0.4rem 1rem rgba(84, 47, 42, 0.2);
+  /* Añade una sombra suave para darle profundidad */
   transition: all 0.25s ease;
 }
 
 .svc-activities__cta-btn:hover,
 .svc-activities__cta-btn:focus-visible {
-  background: var(
-    --clay
-  ); /* Cambia al color arcilla al pasar el ratón, como los demás botones */
-  transform: translateY(
-    -3px
-  ); /* Efecto de levitación un poco más pronunciado */
-  box-shadow: 0 0.6rem 1.5rem rgba(84, 47, 42, 0.3); /* La sombra se amplía al flotar */
+  background: var(--clay);
+  /* Cambia al color arcilla al pasar el ratón, como los demás botones */
+  transform: translateY(-3px);
+  /* Efecto de levitación un poco más pronunciado */
+  box-shadow: 0 0.6rem 1.5rem rgba(84, 47, 42, 0.3);
+  /* La sombra se amplía al flotar */
 }
 
 .activities-grid {
@@ -2706,20 +2715,21 @@ cite {
   border-bottom: 0;
 }
 
-.svc-page .page-hero > p:not(.eyebrow) {
+.svc-page .page-hero>p:not(.eyebrow) {
   max-width: 33rem;
   margin-bottom: 1rem;
   color: var(--white);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-.svc-page .page-hero > p:last-child {
+.svc-page .page-hero>p:last-child {
   color: var(--white);
 }
 
 .svc-page .page-hero .eyebrow {
   color: var(--stone);
 }
+
 /* --------------------------------------------
    PÁGINA DE OPINIONES
 -------------------------------------------- */
@@ -2753,7 +2763,7 @@ cite {
   color: var(--stone);
 }
 
-.opinions-page .page-hero > p:not(.eyebrow) {
+.opinions-page .page-hero>p:not(.eyebrow) {
   max-width: 38rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -2791,6 +2801,7 @@ cite {
   color: var(--wine);
   margin: 0;
 }
+
 /* Reviews Section */
 .reviews-section {
   background: #ffffff;
@@ -2972,6 +2983,7 @@ cite {
   color: #fff;
   transform: translateY(-2px);
 }
+
 /* --------------------------------------------
    PÁGINA DE CONTACTO
 -------------------------------------------- */
@@ -3008,7 +3020,7 @@ cite {
   color: var(--stone);
 }
 
-.contact-page-wrap .page-hero > p:not(.eyebrow) {
+.contact-page-wrap .page-hero>p:not(.eyebrow) {
   max-width: 38rem;
   margin-bottom: 1rem;
   color: var(--white);
@@ -3153,11 +3165,15 @@ cite {
 .contact-map-link:hover {
   text-decoration: underline;
 }
+
 /* Google Maps Header Button */
 .site-nav .nav-cta.nav-cta--maps {
-  background: #f0f0f0; /* Gris muy clarito */
-  border-radius: 6px; /* Bordes suaves para que parezca un botón */
-  padding: 0.5rem 0.6rem; /* Espacio interior para que respire el icono */
+  background: #f0f0f0;
+  /* Gris muy clarito */
+  border-radius: 6px;
+  /* Bordes suaves para que parezca un botón */
+  padding: 0.5rem 0.6rem;
+  /* Espacio interior para que respire el icono */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3172,11 +3188,13 @@ cite {
 
 .site-nav .nav-cta.nav-cta--maps:hover,
 .site-nav .nav-cta.nav-cta--maps:focus-visible {
-  background: #e4e4e4; /* Un gris un pelín más oscuro al pasar el ratón */
+  background: #e4e4e4;
+  /* Un gris un pelín más oscuro al pasar el ratón */
   filter: brightness(1);
 }
 
 @media (min-width: 60rem) {
+
   /* En escritorio, lo sacamos del flujo para que no empuje las palabras */
   .site-nav li:has(.nav-cta--maps) {
     position: absolute;
@@ -3187,6 +3205,7 @@ cite {
 }
 
 @media (max-width: 768px) {
+
   /* 1. CARRUSELES MÓVILES (Habitaciones y La Casa) */
   /* Hemos quitado las clases de "room-amenities" de aquí */
   /* 1. CARRUSELES MÓVILES (Habitaciones, La Casa, Servicios y Actividades) */
@@ -3228,7 +3247,8 @@ cite {
 
   /* 2. ACORDEÓN DE CARACTERÍSTICAS (Nuevo) */
   .room-amenities__cards {
-    display: block !important; /* Desactiva el carrusel y las apila */
+    display: block !important;
+    /* Desactiva el carrusel y las apila */
   }
 
   .room-amenities__card {
@@ -3263,41 +3283,6 @@ cite {
     display: block;
   }
 
-  /* 3. MEJORA DEL MENÚ MÓVIL */
-  /* Oculta los submenús desplegables */
-  .site-nav .nav-dropdown__menu {
-    display: none !important;
-  }
-
-  /* Formato solo para los enlaces de texto (Inicio, La Casa, etc.) */
-  .site-nav a:not(.nav-cta) {
-    padding: 1.1rem 1.5rem !important;
-    font-size: 1.1rem !important;
-    border-bottom: 1px solid rgb(229 220 205 / 40%) !important;
-    text-align: center !important; /* <-- Esta línea centra las palabras */
-  }
-
-  /* Botones de acción (Contacto y Reservar) más pequeños */
-  .site-nav .nav-cta:not(.nav-cta--maps) {
-    border-bottom: none !important;
-    padding: 0.75rem 1rem !important; /* Reduce la altura interior */
-    font-size: 0.95rem !important; /* Reduce el tamaño de letra */
-    width: calc(100% - 5rem) !important; /* Hace los botones más estrechos */
-    margin-left: 2.5rem !important; /* Mantiene los botones centrados */
-    border-radius: 6px !important;
-    margin-bottom: 0.75rem !important; /* Espacio entre los dos botones */
-  }
-
-  /* Separación extra para despegar los botones de la lista principal */
-  .site-nav a[href="contacto.html"] {
-    margin-top: 2.5rem !important; /* Empuja el botón "Contacto" hacia abajo */
-  }
-
-  /* Ocultar el botón de Google Maps en móvil */
-  .site-nav .nav-cta.nav-cta--maps {
-    display: none !important;
-  }
-
   /* 1. Página de Servicios (4 botones): formar un cuadrado de 2x2 en móvil */
   .svc-page .house-section-nav {
     display: grid !important;
@@ -3309,7 +3294,8 @@ cite {
   .svc-page .house-section-nav a {
     justify-content: center !important;
     text-align: center !important;
-    font-size: 0.75rem !important; /* Tamaño optimizado para que los textos encajen perfectamente en dos columnas */
+    font-size: 0.75rem !important;
+    /* Tamaño optimizado para que los textos encajen perfectamente en dos columnas */
     padding: 0.6rem 0.4rem !important;
   }
 
@@ -3325,7 +3311,8 @@ cite {
   .house-page .house-section-nav a,
   .hero .house-section-nav a {
     width: auto !important;
-    flex: 1 1 calc(50% - 0.25rem) !important; /* Se reparten el ancho de forma simétrica en una línea */
+    flex: 1 1 calc(50% - 0.25rem) !important;
+    /* Se reparten el ancho de forma simétrica en una línea */
     justify-content: center !important;
     text-align: center !important;
     font-size: 0.8rem !important;
@@ -3335,56 +3322,106 @@ cite {
   /* Botón de opiniones equilibrado para móvil */
   .reviews-cta {
     display: flex;
-    justify-content: center; /* Centra el botón en la pantalla */
+    justify-content: center;
+    /* Centra el botón en la pantalla */
   }
 
   .reviews-cta__btn {
-    width: min(
-      100%,
-      20rem
-    ); /* No ocupará más de 20rem, adaptándose si la pantalla es menor */
-    white-space: normal; /* Permite que el texto baje de línea de forma natural */
-    text-align: center; /* Centra el texto */
-    justify-content: center; /* Centra el contenido interior (icono y texto) */
-    font-size: 0.9rem; /* Tamaño de letra equilibrado */
-    padding: 0.8rem 1.2rem; /* Espaciado interior cómodo */
-    line-height: 1.35; /* Separa un poco las dos líneas para que respiren */
+    width: min(100%,
+        20rem);
+    /* No ocupará más de 20rem, adaptándose si la pantalla es menor */
+    white-space: normal;
+    /* Permite que el texto baje de línea de forma natural */
+    text-align: center;
+    /* Centra el texto */
+    justify-content: center;
+    /* Centra el contenido interior (icono y texto) */
+    font-size: 0.9rem;
+    /* Tamaño de letra equilibrado */
+    padding: 0.8rem 1.2rem;
+    /* Espaciado interior cómodo */
+    line-height: 1.35;
+    /* Separa un poco las dos líneas para que respiren */
   }
 
   /* Bloque "También te ofrecemos" estilizado para móvil */
   .svc-also {
-    padding: 1.5rem 1.25rem !important; /* Reduce el margen interior para que no se sienta apretado */
-    border-left-width: 3px !important; /* Línea lateral más sutil y fina */
-    background: var(--paper) !important; /* Asegura el fondo cálido de papel */
+    padding: 1.5rem 1.25rem !important;
+    /* Reduce el margen interior para que no se sienta apretado */
+    border-left-width: 3px !important;
+    /* Línea lateral más sutil y fina */
+    background: var(--paper) !important;
+    /* Asegura el fondo cálido de papel */
   }
 
   .svc-also__title {
     font-size: 1.15rem !important;
     margin-bottom: 1rem !important;
-    color: var(
-      --wine
-    ) !important; /* Usa el color corporativo vino en lugar de negro */
+    color: var(--wine) !important;
+    /* Usa el color corporativo vino en lugar de negro */
   }
 
   .svc-also__list {
-    gap: 1rem !important; /* Separa mejor cada punto para que "respire" */
+    gap: 1rem !important;
+    /* Separa mejor cada punto para que "respire" */
   }
 
   .svc-also__list li {
     font-size: 0.88rem !important;
-    color: var(
-      --muted
-    ) !important; /* Cambia el negro puro por el gris elegante del texto general */
+    color: var(--muted) !important;
+    /* Cambia el negro puro por el gris elegante del texto general */
     line-height: 1.5;
   }
 
   /* Corregir el solapamiento de galería y texto en iPhone (Safari Bug) */
   .room-gallery img {
     height: auto !important;
-    aspect-ratio: 3 / 4 !important; /* Fuerza una altura exacta a las 2 fotos pequeñas */
+    aspect-ratio: 3 / 4 !important;
+    /* Fuerza una altura exacta a las 2 fotos pequeñas */
   }
 
   .room-gallery img:first-child {
-    aspect-ratio: 16 / 10 !important; /* Asegura que la foto principal siga siendo ancha */
+    aspect-ratio: 16 / 10 !important;
+    /* Asegura que la foto principal siga siendo ancha */
+  }
+}
+
+/* ========================================================= */
+/* MENÚ DESPLEGABLE PARA MÓVILES Y IPADS (hasta 959px)       */
+/* ========================================================= */
+@media (max-width: 1024px) {
+
+  /* Oculta los submenús desplegables */
+  .site-nav .nav-dropdown__menu {
+    display: none !important;
+  }
+
+  /* Formato solo para los enlaces de texto (Inicio, La Casa, etc.) */
+  .site-nav a:not(.nav-cta) {
+    padding: 1.1rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    border-bottom: 1px solid rgb(229 220 205 / 40%) !important;
+    text-align: center !important;
+  }
+
+  /* Botones de acción (Contacto y Reservar) */
+  .site-nav .nav-cta:not(.nav-cta--maps) {
+    border-bottom: none !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+    width: calc(100% - 5rem) !important;
+    margin-left: 2.5rem !important;
+    border-radius: 6px !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Separación extra para el botón Contacto */
+  .site-nav a[href="contacto.html"] {
+    margin-top: 2.5rem !important;
+  }
+
+  /* Ocultar el botón de Google Maps en menú desplegable */
+  .site-nav .nav-cta.nav-cta--maps {
+    display: none !important;
   }
 }
