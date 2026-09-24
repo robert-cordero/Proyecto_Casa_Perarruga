@@ -3298,17 +3298,38 @@ cite {
     display: none !important;
   }
 
-  /* Organizar los botones del Hero al ancho de la palabra más larga en móvil */
-  .house-section-nav {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: stretch;
-    align-self: flex-start; /* <-- Esta es la clave: evita que el fondo estire la botonera */
+  /* 1. Página de Servicios (4 botones): formar un cuadrado de 2x2 en móvil */
+  .svc-page .house-section-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
   }
 
-  .house-section-nav a {
-    justify-content: space-between;
-    width: auto;
+  .svc-page .house-section-nav a {
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 0.75rem !important; /* Tamaño optimizado para que los textos encajen perfectamente en dos columnas */
+    padding: 0.6rem 0.4rem !important;
+  }
+
+  /* 2. Demás páginas (2 botones como La Casa o Inicio): colocarlos en línea en móvil */
+  .house-page .house-section-nav,
+  .hero .house-section-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  .house-page .house-section-nav a,
+  .hero .house-section-nav a {
+    width: auto !important;
+    flex: 1 1 calc(50% - 0.25rem) !important; /* Se reparten el ancho de forma simétrica en una línea */
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    padding: 0.7rem 0.5rem !important;
   }
 
   /* Botón de opiniones equilibrado para móvil */
@@ -3328,5 +3349,32 @@ cite {
     font-size: 0.9rem; /* Tamaño de letra equilibrado */
     padding: 0.8rem 1.2rem; /* Espaciado interior cómodo */
     line-height: 1.35; /* Separa un poco las dos líneas para que respiren */
+  }
+
+  /* Bloque "También te ofrecemos" estilizado para móvil */
+  .svc-also {
+    padding: 1.5rem 1.25rem !important; /* Reduce el margen interior para que no se sienta apretado */
+    border-left-width: 3px !important; /* Línea lateral más sutil y fina */
+    background: var(--paper) !important; /* Asegura el fondo cálido de papel */
+  }
+
+  .svc-also__title {
+    font-size: 1.15rem !important;
+    margin-bottom: 1rem !important;
+    color: var(
+      --wine
+    ) !important; /* Usa el color corporativo vino en lugar de negro */
+  }
+
+  .svc-also__list {
+    gap: 1rem !important; /* Separa mejor cada punto para que "respire" */
+  }
+
+  .svc-also__list li {
+    font-size: 0.88rem !important;
+    color: var(
+      --muted
+    ) !important; /* Cambia el negro puro por el gris elegante del texto general */
+    line-height: 1.5;
   }
 }
