@@ -3,11 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO BÁSICO -->
+    <title>Habitación Syrah — Versátil para 2 o 4 Personas | Casa Perarruga</title>
     <meta
       name="description"
-      content="Habitación Syrah para dos o cuatro personas, con dos camas individuales, sofá cama, baño privado y balcón en Pozán de Vero."
+      content="Habitación Syrah en Casa Perarruga: 17 m² con dos camas y sofá cama, baño privado y balcón. Perfecta para grupos en el Somontano de Barbastro. Desayuno incluido."
     />
-    <title>Habitación Syrah | Casa Perarruga</title>
+    <link rel="canonical" href="https://www.casaperarruga.com/habitacion-syrah.html" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Casa Perarruga" />
+    <meta name="theme-color" content="#542f2a" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Casa Perarruga" />
+    <meta property="og:url" content="https://www.casaperarruga.com/habitacion-syrah.html" />
+    <meta property="og:title" content="Habitación Syrah — Versátil para 2 o 4 Personas | Casa Perarruga" />
+    <meta
+      property="og:description"
+      content="17 m² con dos camas y sofá cama, baño privado y balcón. Perfecta para grupos en el Somontano. Desayuno incluido."
+    />
+    <meta
+      property="og:image"
+      content="https://www.casaperarruga.com/assets/img/Foto_Habitaciones.JPG"
+    />
+    <meta property="og:image:alt" content="Habitación Syrah en Casa Perarruga" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Habitación Syrah | Casa Perarruga" />
+    <meta name="twitter:description" content="Versátil para 2 o 4 personas. Baño privado y balcón en el Somontano." />
+    <meta name="twitter:image" content="https://www.casaperarruga.com/assets/img/Foto_Habitaciones.JPG" />
+
+    <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +45,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- SCHEMA MARKUP — HotelRoom -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HotelRoom",
+      "name": "Habitación Syrah — Casa Perarruga",
+      "description": "Habitación versátil de 17 m² para dos o cuatro personas con dos camas individuales y sofá cama, baño privado completo y balcón en Pozán de Vero, Somontano de Barbastro.",
+      "url": "https://www.casaperarruga.com/habitacion-syrah.html",
+      "image": ["https://www.casaperarruga.com/assets/img/Foto_Habitaciones.JPG"],
+      "occupancy": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4 },
+      "bed": [
+        { "@type": "BedDetails", "typeOfBed": "Single bed", "numberOfBeds": 2 },
+        { "@type": "BedDetails", "typeOfBed": "Sofa bed", "numberOfBeds": 1 }
+      ],
+      "floorSize": { "@type": "QuantitativeValue", "value": 17, "unitCode": "MTK" },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Baño privado", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Balcón", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Calefacción", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Ropa de cama incluida", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Toallas incluidas", "value": true }
+      ],
+      "containedInPlace": {
+        "@type": "LodgingBusiness",
+        "name": "Casa Perarruga",
+        "url": "https://www.casaperarruga.com/"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.casaperarruga.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Habitaciones", "item": "https://www.casaperarruga.com/habitaciones.html" },
+          { "@type": "ListItem", "position": 3, "name": "Habitación Syrah", "item": "https://www.casaperarruga.com/habitacion-syrah.html" }
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <header class="site-header">
